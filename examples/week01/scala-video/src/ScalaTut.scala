@@ -35,7 +35,7 @@ object ScalaTut {
 
     // Store even numbers in a list
     val evenList = for {i <- 1 to 20
-                        // You can put as many conditons here separated with semicolons
+                        // You can put as many conditions here separated with semicolons
                         // as you need
                         if (i % 2) == 0
     } yield i
@@ -49,6 +49,7 @@ object ScalaTut {
     for (i <- 1 to 5; j <- 6 to 10) {
       println("i: " + i)
       println("j: " + j)
+      println("-")
     }
 
     // There is no break or continue in Scala
@@ -219,7 +220,7 @@ object ScalaTut {
 
     // Add items starting at 2nd slot
     friends2.insert(1, "Mike", "Sally", "Sam", "Mary", "Sue")
-
+    println("After insertions: " + friends2)
     // Remove the 2nd element
     friends2.remove(1)
 
@@ -269,7 +270,7 @@ object ScalaTut {
 
     println("Max : " + favNums.max)
 
-    // Sort in desending order (Use < for assending)
+    // Sort in descending order (Use < for assending)
     val sortedNums = favNums.sortWith(_ > _)
 
     // Return an indexed sequence and convert it into a string with commas
@@ -315,6 +316,8 @@ object ScalaTut {
     println(tupleMarge.toString())
 
     // ---------- CLASSES ----------
+
+
     val rover = new Animal
     rover.setName("Rover")
     rover.setSound("Woof")
@@ -352,6 +355,8 @@ object ScalaTut {
     // You can apply a function to all items of a list with map
     List(1000.0, 10000.0).map(log10Func).foreach(println)
 
+
+
     // You can use an anonymous function with map as well
     // Receives an Int x and multiplies every x by 50
     List(1, 2, 3, 4, 5).map((x: Int) => x * 50).foreach(println)
@@ -369,7 +374,7 @@ object ScalaTut {
       func(num)
     }
 
-    printf("3 * 100 = %.1f)\n", multIt(times3, 100))
+    printf("3 * 100 = %.1f\n", multIt(times3, 100))
 
     // A closure is a function that depends on a variable declared outside
     // of the function
