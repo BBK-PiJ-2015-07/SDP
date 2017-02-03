@@ -19,8 +19,6 @@ project/plugins/project/
 .worksheet
 
 #idea
-.idea
-.idea/
 .idea/workspace.xml
 out/
 
