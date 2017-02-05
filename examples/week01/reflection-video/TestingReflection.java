@@ -115,7 +115,7 @@ public class TestingReflection {
             constructor = reflectClass.getConstructor(new Class[]{EnemyShipFactory.class});
             
             // Call a constructor by passing parameters to create an object
-            
+
             constructor2 = reflectClass.getConstructor(int.class, String.class).newInstance(12, "Random String");
         } 
         
@@ -139,15 +139,14 @@ public class TestingReflection {
         // Return the parameters for a constructor
         
         Class[] constructParameters = constructor.getParameterTypes();
-        
+
         for(Class parameter : constructParameters){
             
             System.out.println(parameter.getName());
-            
+
         }
-        
+
         UFOEnemyShip newEnemyShip = null;
-        
         EnemyShipFactory shipFactory = null;
         
         try {
@@ -155,8 +154,7 @@ public class TestingReflection {
             // Create a UFOEnemyShip object by calling newInstance
             
             newEnemyShip = (UFOEnemyShip) constructor.newInstance(shipFactory);
-            
-        } 
+        }
         
         catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
             
@@ -168,23 +166,24 @@ public class TestingReflection {
         
         newEnemyShip.setName("Xt-1000");
         System.out.println("EnemyShip Name: " + newEnemyShip.getName());
-        
+
+
         // Access private fields using reflection
         
         // Field stores info on a single field of a class
         
         Field privateStringName = null;
-        
+
         try {
             
             // Create a UFOEnemyShip object
             
             UFOEnemyShip enemyshipPrivate = new UFOEnemyShip(shipFactory);
-            
+
             // Define the private field you want to access
             // I can access any field with just its name dynamically
             
-            privateStringName = UFOEnemyShip.class.getDeclaredField("idCode");
+            privateStringName = UFOEnemyShip.class.getDeclaredField("idcode");
             
             // Shuts down security allowing you to access private fields
             
@@ -193,7 +192,7 @@ public class TestingReflection {
             // Get the value of a field and store it in a String
             
             String valueOfName = (String) privateStringName.get(enemyshipPrivate);
-            
+
             System.out.println("EnemyShip Private Name: " + valueOfName);
             
             // Get access to a private method

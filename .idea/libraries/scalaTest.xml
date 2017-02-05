@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="scalaTest">
+    <CLASSES>
+      <root url="file://C:/Program Files (x86)/scalaTest" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://C:/Program Files (x86)/scalaTest" recursive="false" />
+  </library>
+</component>
