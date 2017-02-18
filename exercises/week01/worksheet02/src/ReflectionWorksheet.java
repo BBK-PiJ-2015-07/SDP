@@ -4,6 +4,7 @@ package worksheet02.src; /**
  */
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Constructor.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -31,20 +32,27 @@ public class ReflectionWorksheet {
             e.printStackTrace();
         }
 
+
+        //Class name
+        System.out.println("\n ----\nClass name: " + cls.getName());
+        System.out.println("Class simple name: " + cls.getSimpleName() + "\n ----\n");
+
         //Modifiers
         printModifiers(cls);
 
-
-
+        //Constructors
+        printConstructorInfo(cls);
 
     }
 
+
+
     /**
      * Prints class modifiers
-     * @param cls Type Class whose modifiers are printed
+     * @param cls the method prints the modifiers of this class
      */
-    public static void printModifiers(Class cls){
-
+    private static void printModifiers(Class cls){
+        System.out.println("Class modifiers: \n");
         int modifiers = cls.getModifiers();
 
         System.out.println("isAbstract: " + Modifier.isAbstract(modifiers));
@@ -62,6 +70,20 @@ public class ReflectionWorksheet {
     }
 
 
+    /**
+     * Prints constructor parameter info
+     * @param cls the method prints out the constructor parameters for each constructor of this class
+     */
+    private static void printConstructorInfo(Class cls){
+        Constructor[] cs = cls.getConstructors();
+        for(Constructor c : cs){
+            System.out.println("\n -- Constructor parameter types: ");
+            Class[] paramTypes = c.getParameterTypes();
+            for(Class param : paramTypes){
+                System.out.println(param.getName());
+            }
+        }
+    }
 
 
 
