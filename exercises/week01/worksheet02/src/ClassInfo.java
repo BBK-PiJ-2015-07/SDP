@@ -10,7 +10,7 @@ import java.lang.reflect.Modifier;
 import java.util.Scanner;
 
 
-public class ReflectionWorksheet {
+public class ClassInfo {
     public static void main(String[] args) {
 
         System.out.println("Pls enter a valid classname!");
@@ -33,7 +33,7 @@ public class ReflectionWorksheet {
         printClassInfo(c1);
 
         //Test program with itself
-        ReflectionWorksheet r = new ReflectionWorksheet();
+        ClassInfo r = new ClassInfo();
         Class c2 = r.getClass();
         printClassInfo(c2);
 
