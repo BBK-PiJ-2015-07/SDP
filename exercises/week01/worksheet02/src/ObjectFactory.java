@@ -21,7 +21,10 @@ public class ObjectFactory {
         }*/
     }
 
-
+    /**
+     * Gets user input, which should be a comma separated list of the class name and constructor args.
+     * @return returns the input as a String[]. The first element is the class name, the rest are args.
+     */
     private static String[] getInput(){
         System.out.println("Enter classname and args as a single comma separated list:");
 
