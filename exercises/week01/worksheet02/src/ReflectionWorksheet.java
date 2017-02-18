@@ -4,9 +4,7 @@ package worksheet02.src; /**
  */
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Constructor.*;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.Scanner;
@@ -50,8 +48,6 @@ public class ReflectionWorksheet {
         printFieldInfo(cls);
     }
 
-
-
     /**
      * Prints class modifiers
      * @param cls the method prints the modifiers of this class
@@ -73,7 +69,6 @@ public class ReflectionWorksheet {
         System.out.println("isTransient: " + Modifier.isTransient(modifiers));
         System.out.println("isVolatile: " + Modifier.isVolatile(modifiers));
     }
-
 
     /**
      * Prints constructor parameter info
@@ -111,6 +106,7 @@ public class ReflectionWorksheet {
             System.out.println("Return type: " + m.getReturnType().getName());
         }
     }
+
     /**
      * Prints field info
      * @param cls the method prints out the field info for this class
@@ -122,6 +118,5 @@ public class ReflectionWorksheet {
             System.out.println("\nField name:" + f.getName());
             System.out.println("Field Type: " + f.getType().getName());
         }
-
     }
 }
