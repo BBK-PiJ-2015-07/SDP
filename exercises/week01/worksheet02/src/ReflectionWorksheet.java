@@ -43,6 +43,8 @@ public class ReflectionWorksheet {
         //Constructors
         printConstructorInfo(cls);
 
+        //Methods
+        printMethodInfo(cls);
     }
 
 
@@ -85,6 +87,25 @@ public class ReflectionWorksheet {
         }
     }
 
-
-
+    /**
+     * Prints method info
+     * @param cls the method prints out the method info for this class
+     */
+    private static void printMethodInfo(Class cls){
+        System.out.println("\n -- \nMethod info: ");
+        Method[] ms = cls.getDeclaredMethods();
+        for(Method m : ms){
+            System.out.println("\nMethod name: " + m.getName());
+            System.out.print("Parameter types: ");
+            Class[] ps = m.getParameterTypes();
+            if(ps.length == 0){
+                System.out.println("no parameters.");
+            }else {
+                for (Class p : ps) {
+                    System.out.println("\n- " + p.getName());
+                }
+            }
+            System.out.println("Return type: " + m.getReturnType().getName());
+        }
+    }
 }
