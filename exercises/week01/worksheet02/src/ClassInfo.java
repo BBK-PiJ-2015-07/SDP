@@ -14,7 +14,8 @@ public class ClassInfo {
     public static void main(String[] args) {
 
         System.out.println("Pls enter a valid classname!");
-        //Using Scanner class for allowing input in IDE's console.
+
+        //Using Scanner class for allowing input in IDE's console. For command line: String className = System.console().readLine();
         Scanner scanner = new Scanner(System.in);
         String className = scanner.nextLine();
 
