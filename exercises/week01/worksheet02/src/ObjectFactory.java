@@ -1,9 +1,7 @@
 package worksheet02.src;
 
-import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
-import scala.xml.Null;
-
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -18,7 +16,11 @@ public class ObjectFactory {
         for(Constructor c : cs){
 
             System.out.println("-- " + c);
+            Object o = getObject(c, input);
+
         }
+
+
     }
 
     /**
@@ -63,16 +65,40 @@ public class ObjectFactory {
     }
 
 
+    private static Object getObject(Constructor c, List<String> input){
 
-    /*private static <T> List<T> getObjects(List<Constructor> cs, String[] input){
+        input.remove(0); //keep arg strings only
 
-        List<T> objects = new List<T>();
+        Class[] paramTypes = c.getParameterTypes();
+        Object arguments[] = new Object[input.size()];
 
-        for(Constructor c : cs){
-            Class[] paramTypes = c.getParameterTypes();
+            for (int i = 0; i < input.size(); i++){
+                
+                try {
+                    arguments[i] = paramTypes[i].getConstructor(String.class).newInstance(input.get(i));
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                } catch (NoSuchMethodException e) {
+                    e.printStackTrace();
+                }
+            }
 
+        Object o = null;
+        try {
+            o = c.newInstance(arguments);
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
         }
 
-    }*/
+        return o;
+    }
 
 }
