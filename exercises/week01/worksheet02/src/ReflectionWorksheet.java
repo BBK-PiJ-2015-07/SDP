@@ -45,6 +45,9 @@ public class ReflectionWorksheet {
 
         //Methods
         printMethodInfo(cls);
+
+        //Field
+        printFieldInfo(cls);
     }
 
 
@@ -107,5 +110,18 @@ public class ReflectionWorksheet {
             }
             System.out.println("Return type: " + m.getReturnType().getName());
         }
+    }
+    /**
+     * Prints field info
+     * @param cls the method prints out the field info for this class
+     */
+    private  static void printFieldInfo(Class cls){
+        System.out.println("\n --- \nFields:");
+        Field[] fs = cls.getDeclaredFields();
+        for(Field f : fs){
+            System.out.println("\nField name:" + f.getName());
+            System.out.println("Field Type: " + f.getType().getName());
+        }
+
     }
 }
