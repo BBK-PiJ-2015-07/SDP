@@ -18,11 +18,6 @@ public class ReflectionWorksheet {
         Scanner scanner = new Scanner(System.in);
         String className = scanner.nextLine();
 
-        //ReflectionWorksheet r = new ReflectionWorksheet();
-        //String className = r.getClass().getName();
-
-        System.out.println(className);
-
         Class cls = null;
         try {
             cls = Class.forName(className);
@@ -30,22 +25,21 @@ public class ReflectionWorksheet {
             e.printStackTrace();
         }
 
+        printClassInfo(cls);
 
-        //Class name
-        System.out.println("\n ----\nClass name: " + cls.getName());
-        System.out.println("Class simple name: " + cls.getSimpleName() + "\n ----\n");
+        System.out.println("\n\n-------------- Testing with classes and interfaces --------------");
+        //Test with an interface
+        Class c1 = java.io.Serializable.class;
+        printClassInfo(c1);
 
-        //Modifiers
-        printModifiers(cls);
+        //Test program with itself
+        ReflectionWorksheet r = new ReflectionWorksheet();
+        Class c2 = r.getClass();
+        printClassInfo(c2);
 
-        //Constructors
-        printConstructorInfo(cls);
-
-        //Methods
-        printMethodInfo(cls);
-
-        //Field
-        printFieldInfo(cls);
+        //Test with a class
+        Class c3 = scanner.getClass();
+        printClassInfo(c3);
 
     }
 
@@ -120,4 +114,19 @@ public class ReflectionWorksheet {
             System.out.println("Field Type: " + f.getType().getName());
         }
     }
+
+    /**
+     *
+     * @param cls the method prints out the modifier/constructor/method/field info for this class
+     */
+    private static void printClassInfo(Class cls){
+        System.out.println("\n ----\nClass name: " + cls.getName());
+        System.out.println("Class simple name: " + cls.getSimpleName() + "\n ----\n");
+
+        printModifiers(cls);
+        printConstructorInfo(cls);
+        printMethodInfo(cls);
+        printFieldInfo(cls);
+    }
+
 }
