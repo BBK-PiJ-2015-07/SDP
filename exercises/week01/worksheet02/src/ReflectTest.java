@@ -1,67 +1,84 @@
 package worksheet02.src;
 
+import java.lang.reflect.*;
 import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.Assert;
+/*
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.beans.HasPropertyWithValue.hasProperty;
+*/
 
 /**
  * Created by Case on 19/02/2017.
  */
-public class ReflectTest {
-    private String firstField;
-    private String secondField;
+class ReflectTest {
+    private static Class testObjClass;
+    private static Field[] fields;
+    private static Method[] methods;
 
-    //uncomment public field below for testing JUnit test.
-    //public String field;
-
-    //uncomment field of type ArrayList for testing JUnit test.
-    //private ArrayList<String> arrayListField;
-
-
-    public String getFirstField() {
-        return firstField;
+    @org.junit.jupiter.api.BeforeAll
+    static void setUp() {
+        testObjClass = ReflectTestClass.class;
+        fields = testObjClass.getDeclaredFields();
+        methods = testObjClass.getDeclaredMethods();
     }
 
-    public void setFirstField(String firstField) {
-        this.firstField = firstField;
+    @org.junit.jupiter.api.Test
+    void noMoreThanFourFields() {
+        assertTrue(testObjClass.getDeclaredFields().length <= 4);
     }
 
-    public String getSecondField() {
-        return secondField;
+    @org.junit.jupiter.api.Test
+    void noNonPrivateFields() {
+       for(Field f : fields){
+           assertTrue(Modifier.isPrivate(f.getModifiers()));
+       }
     }
 
-    public void setSecondField(String secondField) {
-        this.secondField = secondField;
+    @org.junit.jupiter.api.Test
+    void noArrayListField() {
+        for(Field f : fields){
+            assertTrue(!(f.getType() == ArrayList.class));
+        }
     }
 
-    public ReflectTest() {
-        this.firstField =  "Zero args passed. Default firstField value";
-        this.secondField =  "Zero args passed. Default secondField value";
+    @org.junit.jupiter.api.Test
+    void fewerThanTwoPrivateHelperMethods() {
+        int helperCount = 0;
+
+        for(Method m : methods){
+            if(Modifier.isPrivate(m.getModifiers())){
+                helperCount += 1;
+            }
+        }
+        assertTrue(helperCount < 2);
     }
 
-    public ReflectTest(String firstField) {
-        this.firstField = firstField;
-        this.secondField =  "One arg passed. Default secondField value";
+    @org.junit.jupiter.api.Test
+    void noMethodsWithThrowsClause(){
+        for(Method m : methods){
+            assertEquals(0, m.getExceptionTypes().length);
+        }
     }
 
-    public ReflectTest(String firstField, String secondField) {
-        this.firstField = "Two args passed. " + firstField;
-        this.secondField = "Two args passed. " + secondField;
+    @org.junit.jupiter.api.Test
+    void noMethodReturnsInt(){
+        for(Method m : methods){
+            assertFalse(m.getReturnType() == int.class);
+        }
     }
 
-    @Override
-    public String toString() {
-        return "ReflectTest{" +
-                "firstField='" + firstField + '\'' +
-                ", secondField='" + secondField + '\'' +
-                '}';
+    @org.junit.jupiter.api.Test
+    void hasZeroArgConstructor(){
+        try{
+            Constructor zeroArgConst = testObjClass.getConstructor();
+        }catch (NoSuchMethodException ex){
+            Assert.fail("Exception thrown: " + ex.getMessage());
+        }
     }
-
-    //uncomment private helper methods below for testing JUnit test.
-    //private void helper1() { System.out.println("I'm helper1."); }
-    //private void helper2() { System.out.println("I'm helper2."); }
-
-    //uncomment method with Throws clause below for testing JUnit test.
-    //private void thrower() throws NullPointerException { throw new NullPointerException("That's a null!!!"); }
-
-    //uncomment method with return type int for testing JUnit test.
-    //private int returnInt(){ return 1;}
 }
