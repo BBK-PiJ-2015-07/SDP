@@ -65,5 +65,9 @@ public class ObjectInfo<T>{
         ReflectTestClass rt = new ReflectTestClass("input01", "input02");
         ObjectInfo oi = new ObjectInfo(rt);
         System.out.println(oi.toString());
+
+        String str = new String("HelloWorld");
+        ObjectInfo oi2 = new ObjectInfo(str);
+        System.out.println(oi2.toString());
     }
 }
