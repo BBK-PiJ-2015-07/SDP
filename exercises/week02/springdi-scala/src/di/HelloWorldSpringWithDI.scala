@@ -17,7 +17,7 @@ object HelloWorldSpringWithDI extends App {
     val factory = new DefaultListableBeanFactory
     val rdr = new PropertiesBeanDefinitionReader(factory)
     val props = new Properties
-    props.load(new FileInputStream("springdi-scala/src/di/beans.properties"))
+    props.load(new FileInputStream("C:\\Users\\Case\\Documents\\Uni\\SDP\\My_SDP\\SDP\\exercises\\week02\\springdi-scala\\src\\di\\beans.properties"))
     rdr.registerBeanDefinitions(props)
     factory
   }

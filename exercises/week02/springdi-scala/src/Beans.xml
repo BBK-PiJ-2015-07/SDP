@@ -9,4 +9,4 @@
             <bean id="spellChecker" class="SpellChecker"/>
         </property>
     </bean>
-</beans>
+</beans>x

@@ -21,7 +21,7 @@ class MessageSupportFactory private() {
   props = new Properties
   try {
     props.load(new FileInputStream(
-      "di-scala/src/decoupledwithfactory/bean.properties"))
+      "C:\\Users\\Case\\Documents\\Uni\\SDP\\My_SDP\\SDP\\exercises\\week02\\di-scala\\src\\decoupledwithfactory\\bean.properties"))
 
     val rendererClass: String = props.getProperty("renderer.class")
     val providerClass: String = props.getProperty("provider.class")
