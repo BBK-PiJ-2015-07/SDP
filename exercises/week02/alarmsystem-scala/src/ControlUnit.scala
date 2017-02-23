@@ -1,11 +1,11 @@
 import scala.collection.mutable.ListBuffer
 
-class ControlUnit {
+class ControlUnit(sensors: ListBuffer[Sensor]) {
 
-  private var sensors: ListBuffer[Sensor] = _
+  private var _sensors: ListBuffer[Sensor] = _
 
   def ControlUnit(sensors: ListBuffer[Sensor]){
-    this.sensors = sensors
+    this._sensors = sensors
   }
 
   def pollSensors() {
@@ -13,7 +13,7 @@ class ControlUnit {
     sensors += new FireSensor()
     sensors += new SmokeSensor()*/
 
-    for (sensor <- sensors) {
+    for (sensor <- _sensors) {
       if (sensor.isTriggered) {
         System.out.println("A " + sensor.getSensorType + " sensor was triggered at " + sensor.getLocation)
       }
