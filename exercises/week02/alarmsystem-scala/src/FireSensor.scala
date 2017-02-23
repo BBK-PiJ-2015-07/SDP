@@ -27,5 +27,3 @@ class FireSensor extends Sensor with UsesBattery {
                 _battery}
   }
 }
-
-object FireSensor

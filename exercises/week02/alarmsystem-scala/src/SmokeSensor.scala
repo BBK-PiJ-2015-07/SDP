@@ -33,7 +33,7 @@ class SmokeSensor extends Sensor with UsesBattery{
   }
 }
 
-object  SmokeSensor
+
 
 
 
