@@ -8,7 +8,7 @@ class SmokeSensor extends Sensor with UsesBattery{
   private var _location: String = _
   private var _battery: Double = _
   private val _sensorType: String = "Smoke Sensor"
-  private val _isHazardSensor = true
+  private val _sensorCategory = "Hazard"
 
   def SmokeSensor(location: String, battery: Double) ={
     this._location = location
@@ -16,14 +16,13 @@ class SmokeSensor extends Sensor with UsesBattery{
   }
 
 
+  override def getSensorCategory: String = _sensorCategory
+
   override def isTriggered: Boolean = Random.nextInt(100) < 10
 
   override def getLocation: String = _location
 
   override def getSensorType: String = _sensorType
-
-
-  override def isHazardSensor: Boolean = _isHazardSensor
 
   override def getBatteryPercentage: Double = _battery match {
     case 0.0 => 0.0

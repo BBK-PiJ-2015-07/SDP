@@ -5,7 +5,7 @@ class FireSensor extends Sensor with UsesBattery {
   private var _location: String = _
   private var _battery: Double = _
   private val _sensorType: String = "Fire Sensor"
-  private val _isHazardSensor: Boolean = true
+  private val _sensorCategory: String = "Hazard"
 
   def FireSensor(location: String, battery: Double) ={
     this._location = location
@@ -13,10 +13,7 @@ class FireSensor extends Sensor with UsesBattery {
   }
 
 
-
-
-
-  override def isHazardSensor: Boolean = _isHazardSensor
+  override def getSensorCategory: String = _sensorCategory
 
   override def isTriggered: Boolean = Random.nextInt(100) < 5
 
