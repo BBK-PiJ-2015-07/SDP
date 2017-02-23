@@ -1,10 +1,10 @@
 import scala.collection.mutable.ListBuffer
 
-class ControlUnit (sensors: ListBuffer[Sensor]){
+class ControlUnit {
 
   private var sensors: ListBuffer[Sensor] = _
 
-  ControlUnit(sensors: ListBuffer[Sensor]){
+  def ControlUnit(sensors: ListBuffer[Sensor]){
     this.sensors = sensors
   }
 
