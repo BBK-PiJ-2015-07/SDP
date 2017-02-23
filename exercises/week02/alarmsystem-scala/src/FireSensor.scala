@@ -1,6 +1,6 @@
 import scala.util.Random
 
-class FireSensor extends Sensor {
+class FireSensor extends Sensor with UsesBattery {
 
   private val _location: String = "Lobby"
   private var _battery: Double = 100

@@ -1,6 +1,8 @@
+
+
 import scala.util.Random
 
-class SmokeSensor extends Sensor {
+class SmokeSensor extends Sensor with UsesBattery{
 
 
   private val _location: String = "Smoking room"
