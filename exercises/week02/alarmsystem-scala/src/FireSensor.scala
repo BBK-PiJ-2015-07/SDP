@@ -17,7 +17,6 @@ class FireSensor extends Sensor {
     case _ => { _battery -= 10;
                 _battery}
   }
-
 }
 
 object FireSensor
