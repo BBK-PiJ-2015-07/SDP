@@ -15,7 +15,7 @@ import java.util.Calendar
     }
 
 
-
+    //Open Closed principle, Liskov substitution
     override def pollSensors(): Unit = {
       val now = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
 
