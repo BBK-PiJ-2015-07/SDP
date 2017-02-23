@@ -2,9 +2,21 @@ import scala.util.Random
 
 class FireSensor extends Sensor with UsesBattery {
 
-  private val _location: String = "Lobby"
-  private var _battery: Double = 100
+  private var _location: String = _
+  private var _battery: Double = _
   private val _sensorType: String = "Fire Sensor"
+  private val _isHazardSensor: Boolean = true
+
+  def FireSensor(location: String, battery: Double) ={
+    this._location = location
+    this._battery = battery
+  }
+
+
+
+
+
+  override def isHazardSensor: Boolean = _isHazardSensor
 
   override def isTriggered: Boolean = Random.nextInt(100) < 5
 

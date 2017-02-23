@@ -5,4 +5,6 @@ trait Sensor {
 
   def getSensorType: String
 
+  def isHazardSensor: Boolean
+
 }
