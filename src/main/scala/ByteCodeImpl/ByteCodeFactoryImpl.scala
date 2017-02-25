@@ -1,11 +1,13 @@
 package ByteCodeImpl
 
-import bc.{ByteCode, ByteCodeFactory}
+import bc.{ByteCode, ByteCodeFactory, ByteCodeValues, InvalidBytecodeException}
 
 /**
   * Created by Case on 25/02/2017.
   */
 class ByteCodeFactoryImpl extends ByteCodeFactory{
+  var lookUp: ByteCodeLookUp = new ByteCodeLookUp()
+
   /**
     * Returns a [[ByteCode]].
     *
@@ -21,5 +23,22 @@ class ByteCodeFactoryImpl extends ByteCodeFactory{
     * @param args an optional integer argument (depends on bytecode)
     * @return a new bytecode object
     */
-  override def make(byte: Byte, args: Int*): ByteCode = ???
+  override def make(byte: Byte, args: Int*): ByteCode = {
+    val name = lookUp.bytecodeInverse.get(byte).getOrElse("").toLowerCase
+    if(name.isEmpty)
+      throw new InvalidBytecodeException("Unrecognised byte code.")
+
+    var byteCode: ByteCode = Class.forName(name).newInstance().asInstanceOf[ByteCode]
+    var constrs = byteCode.getClass.getConstructors()
+    var constr = constrs(0)
+
+
+
+
+
+    new Print
+  }
 }
+
+
+
