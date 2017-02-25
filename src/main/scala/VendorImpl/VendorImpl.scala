@@ -43,6 +43,12 @@ class VendorImpl extends ProgramParser {
     Vector( new Instruction("asads", vector2))
   }
 
-  def main(args: Array[String]): Unit =
-    parse("asdasda")
 }
+
+object Demo {
+  def main(args: Array[String]) {
+      val vi = new VendorImpl()
+      vi.parse("asdfs")
+  }
+}
+
