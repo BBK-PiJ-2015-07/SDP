@@ -31,13 +31,13 @@ class VendorImpl extends ProgramParser {
     */
   override def parseString(string: String): InstructionList = {
     
-    var list = new InstructionList()
+    var list = Vector[Instruction]()
 
     for(str <- string.split("\n")){
       if(!str.isEmpty()) {
         val instrStr = str.split("\\s+")
         var instrCode = instrStr(0)
-        var args: Vector[Int] = new Vector[Int](instrStr.length-1)
+        var args =  Vector();///[Int](instrStr.length-1)
 
         for(a <- 1 to instrStr.length){
           args :+ a.toInt

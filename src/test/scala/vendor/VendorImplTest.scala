@@ -9,9 +9,9 @@ import org.scalatest.FunSuite
   */
 class VendorImplTest extends FunSuite{
 
-  val vi = new VendorImpl
+  val vi = new VendorImpl()
 
-  testParseOutput("Output length") {
+  test("Correct number of instruction are read") {
     val testStr = "iconst 4\niconst 5\niadd\nprint"
     var instructions : Vector[Instruction] = vi.parse(testStr)
 
