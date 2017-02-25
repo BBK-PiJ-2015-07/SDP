@@ -4,15 +4,15 @@ import bc.ByteCode
 import vm.VirtualMachine
 
 /**
-  * Created by Case on 25/02/2017.
+  * Created by davidasfaha on 25/02/2017.
   */
-class IincImpl extends ByteCode {
+class Idec extends ByteCode {
   /**
     * A unique byte value representing the bytecode. An implementation
     * will set this to the bytecode corresponding to the name of the
-    * bytecode in [[ByteCodeValues]]
+    * bytecode in [[bc.ByteCodeValues]]
     */
-  override val code: Byte = bytecode.get("iinc").get
+  override val code: Byte = bytecode.get("idec").get
 
   /**
     * Returns a new [[VirtualMachine]] after executing this bytecode operation.
@@ -21,7 +21,9 @@ class IincImpl extends ByteCode {
     * @return a new virtual machine
     */
   override def execute(vm: VirtualMachine): VirtualMachine = {
-    var (x: Int, vm1: VirtualMachine) = vm.pop()
-    vm1.push(x+1)
+
+    var(x: Int, vm_inner: VirtualMachine) = vm.pop()
+    vm_inner.push(x-1)
+
   }
 }
