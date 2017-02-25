@@ -22,6 +22,6 @@ class InegImpl extends ByteCode {
     */
   override def execute(vm: VirtualMachine): VirtualMachine = {
     var (x: Int, vm1: VirtualMachine) = vm.pop()
-    vm.push(-x)
+    vm1.push(-x)
   }
 }

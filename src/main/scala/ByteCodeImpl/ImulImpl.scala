@@ -24,6 +24,6 @@ class ImulImpl extends ByteCode{
   override def execute(vm: VirtualMachine): VirtualMachine = {
     var (x: Int, vm1: VirtualMachine) = vm.pop()
     var (y: Int, vm2: VirtualMachine) = vm1.pop()
-    vm.push(x * y)
+    vm2.push(x * y)
   }
 }

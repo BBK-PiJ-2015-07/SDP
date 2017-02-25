@@ -24,6 +24,5 @@ class PrintImpl extends ByteCode {
     val (x: Int, vm1: VirtualMachine) = vm.pop()
     println(x)
     vm1
-
   }
 }

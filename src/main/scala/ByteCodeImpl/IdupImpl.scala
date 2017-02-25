@@ -23,7 +23,7 @@ class IdupImpl extends ByteCode {
   override def execute(vm: VirtualMachine): VirtualMachine = {
 
     var(x: Int, vm_inner: VirtualMachine) = vm.pop()
-    vm_inner.push(x)
+    vm_inner = vm_inner.push(x)
     vm_inner.push(x)
   }
 }

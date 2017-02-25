@@ -22,6 +22,6 @@ class IincImpl extends ByteCode {
     */
   override def execute(vm: VirtualMachine): VirtualMachine = {
     var (x: Int, vm1: VirtualMachine) = vm.pop()
-    vm.push(x+1)
+    vm1.push(x+1)
   }
 }

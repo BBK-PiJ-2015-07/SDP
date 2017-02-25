@@ -23,9 +23,7 @@ class IdecImpl extends ByteCode {
   override def execute(vm: VirtualMachine): VirtualMachine = {
 
     var(x: Int, vm_inner: VirtualMachine) = vm.pop()
-    x-= 1
-
-    vm_inner.push(x)
+    vm_inner.push(x-1)
 
   }
 }
