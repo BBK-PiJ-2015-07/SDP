@@ -58,13 +58,4 @@ class VendorImpl extends ProgramParser {
   }
 
 }
-/*
-
-object Demo {
-  def main(args: Array[String]) {
-      val vi = new VendorImpl()
-      vi.parse("asdfs")
-  }
-}
-*/
 
