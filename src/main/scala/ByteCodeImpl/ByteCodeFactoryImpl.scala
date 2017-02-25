@@ -1,11 +1,17 @@
 package ByteCodeImpl
 
 import bc.{ByteCode, ByteCodeFactory, ByteCodeValues, InvalidBytecodeException}
+import java.lang.Class
+import java.lang.reflect.Constructor
 
+//import ByteCodeImpl.DUMMYByteCode
+//import ByteCodeImpl.ByteCodeLookUp
 /**
   * Created by Case on 25/02/2017.
   */
 class ByteCodeFactoryImpl extends ByteCodeFactory{
+
+
   var lookUp: ByteCodeLookUp = new ByteCodeLookUp()
 
   /**
@@ -24,19 +30,36 @@ class ByteCodeFactoryImpl extends ByteCodeFactory{
     * @return a new bytecode object
     */
   override def make(byte: Byte, args: Int*): ByteCode = {
-    val name = lookUp.bytecodeInverse.get(byte).getOrElse("").toLowerCase
+
+    val name = lookUp.bytecodeInverse.get(byte).getOrElse("").capitalize
+
     if(name.isEmpty)
       throw new InvalidBytecodeException("Unrecognised byte code.")
 
-    var byteCode: ByteCode = Class.forName(name).newInstance().asInstanceOf[ByteCode]
-    var constrs = byteCode.getClass.getConstructors()
-    var constr = constrs(0)
+    var thisByteCode = Class.forName("ByteCodeImpl." + name)
+    var constrs = thisByteCode.getConstructors()
+    var paramCount = constrs(0).getParameterCount()
+    var thisByteCodeConstructor = constrs(0)
 
-
-
+    if (paramCount==1) {
+      var commandByteCode = thisByteCodeConstructor.newInstance(Int.box(args(0)))
+    }else{
+      var commandByteCode  = thisByteCodeConstructor.newInstance()
+    }
 
 
     new Print
+
+  //  lookUp
+/*
+    Constructor constructor = MyObject.class.getConstructor(String.class);
+
+    MyObject myObject = (MyObject) constructor.newInstance("constructor-arg1");
+
+
+
+
+    new Print*/
   }
 }
 
