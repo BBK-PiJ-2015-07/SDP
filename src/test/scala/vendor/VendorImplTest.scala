@@ -11,10 +11,12 @@ class VendorImplTest extends FunSuite{
 
   val vi = new VendorImpl()
 
-  test("Correct number of instruction are read") {
+  test("Correct number of instructions are read") {
     val testStr = "iconst 4\niconst 5\niadd\nprint"
-    var instructions : Vector[Instruction] = vi.parse(testStr)
+    val instructions : Vector[Instruction] = vi.parseString(testStr)
 
     assert(instructions.length == 4)
   }
+
+
 }

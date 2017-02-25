@@ -1,4 +1,6 @@
 package VendorImpl
+import java.lang.NumberFormatException
+
 import scala.io.Source
 import scala.collection.immutable.Vector
 import vendor._
@@ -30,19 +32,24 @@ class VendorImpl extends ProgramParser {
     * @return an instruction list
     */
   override def parseString(string: String): InstructionList = {
-    
+
     var list = Vector[Instruction]()
 
     for(str <- string.split("\n")){
       if(!str.isEmpty()) {
         val instrStr = str.split("\\s+")
-        var instrCode = instrStr(0)
-        var args =  Vector();///[Int](instrStr.length-1)
+        val instrCode = instrStr(0)
 
-        for(a <- 1 to instrStr.length){
-          args :+ a.toInt
+        var args =  Vector[Int]()
+
+        for(i <- 1 to instrStr.length-1){
+          try {
+            args = args :+ instrStr(i).toInt
+          }catch {
+            case e: NumberFormatException => throw new InvalidInstructionFormatException("Invalid instruction input: " + instrStr(i))
+          }
         }
-        list :+ new Instruction(instrCode, args)
+        list = list :+ new Instruction(instrCode, args)
       }
 
     }
@@ -51,6 +58,7 @@ class VendorImpl extends ProgramParser {
   }
 
 }
+/*
 
 object Demo {
   def main(args: Array[String]) {
@@ -58,4 +66,5 @@ object Demo {
       vi.parse("asdfs")
   }
 }
+*/
 
