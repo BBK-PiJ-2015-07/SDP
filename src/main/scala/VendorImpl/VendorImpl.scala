@@ -18,8 +18,8 @@ class VendorImpl extends ProgramParser {
     * @return an instruction list
     */
   override def parse(file: String): InstructionList = {
-    //var all_instructions = scala.io.Source.fromFile(file).mkString
-    parseString("aaaa\nbbbb")
+    var all_instructions = scala.io.Source.fromFile(file).mkString
+    parseString(all_instructions)
   }
 
   /**
@@ -30,17 +30,24 @@ class VendorImpl extends ProgramParser {
     * @return an instruction list
     */
   override def parseString(string: String): InstructionList = {
-    // TODO - error checking tests
-    string.split("\n").foreach(println(_))
+    
+    var list = new InstructionList()
 
-    val vector = scala.collection.immutable.Vector.empty
-    println(vector)
+    for(str <- string.split("\n")){
+      if(!str.isEmpty()) {
+        val instrStr = str.split("\\s+")
+        var instrCode = instrStr(0)
+        var args: Vector[Int] = new Vector[Int](instrStr.length-1)
 
-    // Add new value at end of vector.
-    val vector2 = vector :+ 5
-    println(vector2)
+        for(a <- 1 to instrStr.length){
+          args :+ a.toInt
+        }
+        list :+ new Instruction(instrCode, args)
+      }
 
-    Vector( new Instruction("asads", vector2))
+    }
+    list
+
   }
 
 }
