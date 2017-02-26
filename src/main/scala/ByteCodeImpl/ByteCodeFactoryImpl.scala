@@ -31,24 +31,26 @@ class ByteCodeFactoryImpl extends ByteCodeFactory{
     */
   override def make(byte: Byte, args: Int*): ByteCode = {
 
-    val name = lookUp.bytecodeInverse.get(byte).getOrElse("").capitalize
+    val name = lookUp.bytecodeInverse.getOrElse(byte,"").capitalize
 
     if(name.isEmpty)
       throw new InvalidBytecodeException("Unrecognised byte code.")
 
     var thisByteCode = Class.forName("ByteCodeImpl." + name)
-    var constrs = thisByteCode.getConstructors()
-    var paramCount = constrs(0).getParameterCount()
+    var constrs = thisByteCode.getConstructors
+    var paramCount = constrs(0).getParameterCount
     var thisByteCodeConstructor = constrs(0)
 
+    var commandByteCode : Any = None
+
     if (paramCount==1) {
-      var commandByteCode = thisByteCodeConstructor.newInstance(Int.box(args(0)))
+      commandByteCode = thisByteCodeConstructor.newInstance(Int.box(args(0)))
     }else{
-      var commandByteCode  = thisByteCodeConstructor.newInstance()
+      commandByteCode  = thisByteCodeConstructor.newInstance()
     }
 
 
-    new Print
+     commandByteCode.asInstanceOf[ByteCode]
 
   //  lookUp
 /*
