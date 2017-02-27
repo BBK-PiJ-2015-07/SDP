@@ -1,5 +1,6 @@
 package basics
 
+import Math.min
 /**
  * This is a singleton object containing the functions you need
  * to implement. Please make sure to read the documentation associated
@@ -50,7 +51,16 @@ object ScalaBasics {
    * @param r the array of integers
    * @return the minimum integer in the array
    */
-  def minWhile(r: Array[Int]): Int = ???
+  def minWhile(r: Array[Int]): Int = {
+    var min = r(0)
+    var index = 0
+    while(index < r.length){
+      if(r(index) < min)
+        min = r(index)
+      index += 1
+    }
+    min
+  }
 
   /**
    * Write a function that returns the minimum integer in the Array r.
@@ -64,7 +74,14 @@ object ScalaBasics {
    * @param r the array of integers
    * @return the minimum integer in the array
    */
-  def minFor(r: Array[Int]): Int = ???
+  def minFor(r: Array[Int]): Int = {
+    var minVal = r(0)
+
+    for( i <- Range(0, r.length)) {
+      minVal = min(minVal, r(i))
+    }
+    minVal
+  }
 
   /**
    * Write a function called minRecursive that returns the minimum integer in the Array r.
@@ -80,7 +97,15 @@ object ScalaBasics {
    * @param r the array of integers
    * @return the minimum integer in the array
    */
-  def minRecursive(r: Array[Int]): Int = ???
+  def minRecursive(r: Array[Int]): Int = {
+    //min(r.head, minRecursive(r.tail))
+    r match{
+      case Array() => throw new RuntimeException("Min of empty array.")
+      case Array(_) => r.head
+      case Array(_,_*) =>  if (r.head < minRecursive(r.tail)) r.head else minRecursive(r.tail)
+    }
+
+  }
 
   /**
    * Return the base 36 equivalent of the BitInt b.
