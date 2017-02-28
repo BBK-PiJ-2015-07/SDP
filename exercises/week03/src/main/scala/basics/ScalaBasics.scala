@@ -1,6 +1,7 @@
 package basics
 
 import Math.min
+import scala.collection.immutable.StringOps
 /**
  * This is a singleton object containing the functions you need
  * to implement. Please make sure to read the documentation associated
@@ -161,7 +162,11 @@ object ScalaBasics {
    * @param s the potential palindrome
    * @return true if s is a palindrome; false otherwise
    */
-  def isPalindrome(s: String): Boolean = ???
+  def isPalindrome(s: String): Boolean = {
+    //normalise input
+    val normalised = s.toLowerCase.replaceAll("""[\-\s\.\?\,\;\']""", "")
+    return true
+  }
 
   /**
    * You don't have to complete this one as we've removed it from the list
