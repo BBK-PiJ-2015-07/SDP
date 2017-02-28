@@ -163,9 +163,9 @@ object ScalaBasics {
    * @return true if s is a palindrome; false otherwise
    */
   def isPalindrome(s: String): Boolean = {
-    //normalise input
     val normalised = s.toLowerCase.replaceAll("""[\-\s\.\?\,\;\']""", "")
-
+    val bools = for(i <- 0 to normalised.length-1) yield{ normalised(i).equals(normalised.reverse(i)) }
+    !bools.contains(false)
   }
 
   /**
