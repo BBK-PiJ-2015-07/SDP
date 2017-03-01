@@ -1,4 +1,4 @@
-package week01.theMOP
+package MOP
 
 String.metaClass.americanise = {
     matcher = (delegate =~ /ise/)

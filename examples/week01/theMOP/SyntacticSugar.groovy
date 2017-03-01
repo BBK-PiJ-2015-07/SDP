@@ -1,4 +1,4 @@
-package week01.theMOP
+package MOP
 
 Integer.metaClass.getSeconds << { ->
     delegate * 1000

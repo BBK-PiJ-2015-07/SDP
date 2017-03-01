@@ -4,30 +4,38 @@
     <option name="linkedExternalProjectsSettings">
       <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/coursework/cw-two" />
+        <option name="jdk" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/coursework/cw-two" />
             <option value="$PROJECT_DIR$/coursework/cw-two/project" />
           </set>
         </option>
-        <option name="sbtVersion" value="0.13.8" />
+        <option name="resolveSbtClassifiers" value="true" />
+        <option name="useAutoImport" value="true" />
+        <option name="useOurOwnAutoImport" value="true" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/examples/week04" />
+        <option name="sbtVersion" value="0.13.13" />
         <option name="useAutoImport" value="true" />
         <option name="useOurOwnAutoImport" value="true" />
       </SbtProjectSettings>
       <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/exercises/week03" />
+        <option name="jdk" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/exercises/week03" />
             <option value="$PROJECT_DIR$/exercises/week03/project" />
           </set>
         </option>
-        <option name="sbtVersion" value="0.13.8" />
         <option name="useAutoImport" value="true" />
         <option name="useOurOwnAutoImport" value="true" />
       </SbtProjectSettings>
       <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/exercises/week04" />
+        <option name="jdk" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/exercises/week04" />

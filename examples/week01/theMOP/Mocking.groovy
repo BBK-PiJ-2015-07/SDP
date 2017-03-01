@@ -1,4 +1,4 @@
-package week01.theMOP
+package MOP
 
 File.metaClass.getText = { ->
     "my canned data"

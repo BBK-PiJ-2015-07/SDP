@@ -9,13 +9,13 @@
       <sourceFolder url="file://$MODULE_DIR$/week01/reflection/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/week02/singleton" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/week02/SOLID/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/week01" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/week02" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/week04" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/week01" />
+      <excludeFolder url="file://$MODULE_DIR$/week02" />
     </content>
-    <orderEntry type="library" name="scala-sdk-2.12.1" level="application" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="scala-sdk-2.12.1" level="application" />
     <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
@@ -46,5 +46,6 @@
     <orderEntry type="library" name="SBT: org.scalatest:scalatest_2.12:3.0.1:jar" level="project" />
     <orderEntry type="library" name="Spring-4.3.6.RELEASE" level="project" />
     <orderEntry type="library" name="groovy-2.4.7" level="application" />
+    <orderEntry type="library" name="scalactic_2.11-3.0.1" level="project" />
   </component>
 </module>
