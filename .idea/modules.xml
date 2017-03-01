@@ -4,12 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SDP.iml" filepath="$PROJECT_DIR$/SDP.iml" />
       <module fileurl="file://$PROJECT_DIR$/coursework/coursework.iml" filepath="$PROJECT_DIR$/coursework/coursework.iml" />
-      <module fileurl="file://$PROJECT_DIR$/coursework/cw-two/.idea/modules/cw-two.iml" filepath="$PROJECT_DIR$/coursework/cw-two/.idea/modules/cw-two.iml" />
-      <module fileurl="file://$PROJECT_DIR$/coursework/cw-two/.idea/modules/cw-two-build.iml" filepath="$PROJECT_DIR$/coursework/cw-two/.idea/modules/cw-two-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/examples/examples.iml" filepath="$PROJECT_DIR$/examples/examples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/exercises/exercises.iml" filepath="$PROJECT_DIR$/exercises/exercises.iml" />
-      <module fileurl="file://$PROJECT_DIR$/exercises/week03/.idea/modules/week03.iml" filepath="$PROJECT_DIR$/exercises/week03/.idea/modules/week03.iml" />
-      <module fileurl="file://$PROJECT_DIR$/exercises/week03/.idea/modules/week03-build.iml" filepath="$PROJECT_DIR$/exercises/week03/.idea/modules/week03-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercises/.idea/modules/exercises.iml" filepath="$PROJECT_DIR$/exercises/.idea/modules/exercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercises/.idea/modules/exercises-build.iml" filepath="$PROJECT_DIR$/exercises/.idea/modules/exercises-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercises/week04/.idea/modules/week04.iml" filepath="$PROJECT_DIR$/exercises/week04/.idea/modules/week04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercises/week04/.idea/modules/week04-build.iml" filepath="$PROJECT_DIR$/exercises/week04/.idea/modules/week04-build.iml" />
     </modules>
   </component>
 </project>
