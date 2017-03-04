@@ -49,8 +49,7 @@ class ByteCodeFactoryImpl extends ByteCodeFactory{
       commandByteCode  = thisByteCodeConstructor.newInstance()
     }
 
-
-     commandByteCode.asInstanceOf[ByteCode]
+    commandByteCode.asInstanceOf[ByteCode]
 
   //  lookUp
 /*
@@ -63,6 +62,9 @@ class ByteCodeFactoryImpl extends ByteCodeFactory{
 
     new Print*/
   }
+
+
+
 }
 
 

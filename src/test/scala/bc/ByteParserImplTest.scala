@@ -15,10 +15,10 @@ class ByteCodeParserImplTest extends FunSuite {
   var bcl = new ByteCodeLookUp()
 
   test("Test vector") {
-   val testVector: Vector[ByteCode] =  byteCodeParser.parse(Vector(bcl.names.getOrElse("iconst", 0), 4.toByte, bcl.names.getOrElse("iconst", 0), 5.toByte
-     , bcl.names.getOrElse("iadd",0), bcl.names.getOrElse("print", 0)))
+   val testVector: Vector[ByteCode] =  byteCodeParser.parse(Vector(bcl.bytecode.getOrElse("iconst", 0), 4.toByte, bcl.bytecode.getOrElse("iconst", 0), 5.toByte
+     , bcl.bytecode.getOrElse("iadd",0), bcl.bytecode.getOrElse("print", 0)))
 
-    testVector(0).code = testVector(0).bytecode.getOrElse('iconst', 0)
+    assert(testVector(0).code == testVector(0).bytecode.getOrElse("iconst", 0))
 
 /*
     res21: scala.collection.immutable.Map[String,Byte] = Map(ineg -> 7, iswap -> 11, idiv -> 5,

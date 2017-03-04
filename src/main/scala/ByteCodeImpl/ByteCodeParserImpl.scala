@@ -1,11 +1,14 @@
 package ByteCodeImpl
 
-import bc.{ByteCode, ByteCodeParser}
+import bc.{ByteCode, ByteCodeParser, ByteCodeFactory}
 
 /**
   * Created by davidasfaha on 04/03/2017.
   */
 class ByteCodeParserImpl extends ByteCodeParser {
+
+  val factory = new ByteCodeFactoryImpl()
+
   /**
     * Parses a vector of `Byte` into a vector of `ByteCode`.
     *
@@ -16,8 +19,22 @@ class ByteCodeParserImpl extends ByteCodeParser {
     * @return a vector of `ByteCode` objects
     */
   override def parse(bc: Vector[Byte]): Vector[ByteCode] = {
+    var byteCodes: List[ByteCode] = List()
 
+    var wasIconst = false
 
-
+    for (i <- 1 until bc.length) {
+      if(!wasIconst) {
+        var curr = bc(i)
+        if (curr == 1) {
+          byteCodes = byteCodes :+ factory.make(bc(i), bc(i + 1).toInt)
+          wasIconst = true
+        } else {
+          byteCodes = byteCodes :+ factory.make(bc(i))
+          wasIconst = false
+        }
+      }
+    }
+    byteCodes.toVector
   }
 }
