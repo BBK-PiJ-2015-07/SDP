@@ -5,7 +5,7 @@ import vm.VirtualMachine
 /**
   * Created by davidasfaha on 25/02/2017.
   */
-class Iconst(value: Int) extends ByteCode{
+class Iconst(value: Int) extends ByteCode with ByteCodeArity {
 
   /**
     * A unique byte value representing the bytecode. An implementation
@@ -13,6 +13,7 @@ class Iconst(value: Int) extends ByteCode{
     * bytecode in [[ByteCodeValues]]
     */
   override val code: Byte = bytecode.get("iconst").get
+  argnum = 1
 
   /**
     * Returns a new [[VirtualMachine]] after executing this bytecode operation.

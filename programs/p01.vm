@@ -1,4 +1,3 @@
-iconst 4
-iconst 5
-iadd
-print
+val (left: Int, vm1: VirtualMachine) = vm.pop()
+val (right: Int, vm2: VirtualMachine) = vm1.pop()
+vm2.push(left + right)
