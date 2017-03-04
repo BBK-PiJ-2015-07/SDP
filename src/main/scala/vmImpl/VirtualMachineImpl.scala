@@ -8,6 +8,9 @@ import bc.ByteCode
 import vm.VirtualMachine
 
 class VirtualMachineImpl extends VirtualMachine {
+
+  var stack = List[Int]()
+
   /**
     * Executes a vector of bytecodes.
     *
@@ -32,7 +35,11 @@ class VirtualMachineImpl extends VirtualMachine {
     * @param bc the vector of bytecodes
     * @return a tuple of a new vector of bytecodes and virtual machine
     */
-  override def executeOne(bc: Vector[ByteCode]): (Vector[ByteCode], VirtualMachine) = ???
+  override def executeOne(bc: Vector[ByteCode]): (Vector[ByteCode], VirtualMachine) = {
+    val instr = bc(0)
+    val rest = bc.tail
+    (rest, instr.execute(this))
+  }
 
   /**
     * Pushes an integer value onto the virtual machine stack.
@@ -40,7 +47,11 @@ class VirtualMachineImpl extends VirtualMachine {
     * @param value the integer to push
     * @return a new virtual machine with the integer `value` pushed
     */
-  override def push(value: Int): VirtualMachine = ???
+  override def push(value: Int): VirtualMachine = {
+    var vm = new VirtualMachineImpl()
+    vm.stack = value :: stack
+    vm
+  }
 
   /**
     * Pops an integer value off of the virtual machine stack.
@@ -48,7 +59,12 @@ class VirtualMachineImpl extends VirtualMachine {
     * @return (i, vm), where i is the integer popped and vm is the
     *         new virtual machine
     */
-  override def pop(): (Int, VirtualMachine) = ???
+  override def pop(): (Int, VirtualMachine) = {
+    var vm = new VirtualMachineImpl()
+    val num = stack.head
+    vm.stack = stack.tail
+    (num, vm)
+  }
 
   /**
     * Returns the state of the virtual machine stack.
@@ -57,5 +73,7 @@ class VirtualMachineImpl extends VirtualMachine {
     *
     * @return the state of the stack
     */
-  override def state: Vector[Int] = ???
+  override def state: Vector[Int] = {
+    stack.toVector
+  }
 }
