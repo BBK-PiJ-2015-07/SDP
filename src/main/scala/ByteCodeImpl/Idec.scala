@@ -6,7 +6,7 @@ import vm.VirtualMachine
 /**
   * Created by davidasfaha on 25/02/2017.
   */
-class Idec extends ByteCode {
+class Idec extends ByteCode with ByteCodeArity {
   /**
     * A unique byte value representing the bytecode. An implementation
     * will set this to the bytecode corresponding to the name of the
