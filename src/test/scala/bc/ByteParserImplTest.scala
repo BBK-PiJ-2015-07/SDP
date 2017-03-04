@@ -22,7 +22,7 @@ class ByteCodeParserImplTest extends FunSuite {
     assert(testVector(1).code == testVector(1).bytecode.getOrElse("iconst", 0))
     assert(testVector(2).code == testVector(2).bytecode.getOrElse("iadd", 0))
     assert(testVector(3).code == testVector(3).bytecode.getOrElse("print", 0))
-    
+
 
   }
 }

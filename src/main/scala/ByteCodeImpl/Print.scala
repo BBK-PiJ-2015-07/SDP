@@ -6,7 +6,7 @@ import vm.VirtualMachine
 /**
   * Created by davidasfaha on 25/02/2017.
   */
-class Print extends ByteCode   with ByteCodeArity {
+class Print extends ByteCode  {
   /**
     * A unique byte value representing the bytecode. An implementation
     * will set this to the bytecode corresponding to the name of the

@@ -5,7 +5,7 @@ import vm.VirtualMachine
 /**
   * Created by davidasfaha on 25/02/2017.
   */
-class Iconst(value: Int) extends ByteCode with ByteCodeArity {
+class Iconst(value: Int) extends ByteCode  {
 
   /**
     * A unique byte value representing the bytecode. An implementation

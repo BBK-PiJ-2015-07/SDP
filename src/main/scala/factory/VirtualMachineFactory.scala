@@ -21,7 +21,7 @@ object VirtualMachineFactory {
     new VendorImpl()
   }
   // TODO
-  def byteCodeParser: ByteCodeParser = ???
+  def byteCodeParser: ByteCodeParser = new ByteCodeParserImpl
 
   // TODO
   def virtualMachineParser: VirtualMachineParser = ???
