@@ -1,12 +1,21 @@
 package vmImpl
 
+import ByteCodeImpl.{ByteCodeLookUp, ByteCodeParserImpl}
+import VendorImpl.VendorImpl
 import bc.ByteCode
+import vendor.{Instruction, ProgramParser}
 import vm._
+
+import scala.collection.mutable.ListBuffer
 
 /**
   * Created by davidasfaha on 04/03/2017.
   */
 class VirtualMachineParserImpl extends VirtualMachineParser {
+
+  var vendorParser = new VendorImpl()
+  var byteCodeParser = new ByteCodeParserImpl()
+  var lookup = new ByteCodeLookUp()
   /**
     * Returns a vector of [[bc.ByteCode]].
     *
@@ -17,7 +26,19 @@ class VirtualMachineParserImpl extends VirtualMachineParser {
     * @param file the file containing a program
     * @return a vector of bytecodes
     */
-  override def parse(file: String): Vector[ByteCode] = ???
+  override def parse(file: String): Vector[ByteCode] = {
+    val instructions = vendorParser.parse(file)
+    var byteCodes = List[Byte]()
+
+    for(i <- instructions){
+      val instrCode: Byte = lookup.bytecode.getOrElse(i.name, 0)
+      val args: List[Byte] = i.args.map(x => x.toByte).toList
+
+
+      byteCodes = byteCodes ::: args ::: (instrCode :: List())
+    }
+    byteCodeParser.parse(byteCodes.toVector)
+  }
 
   /**
     * Returns a vector of [[bc.ByteCode]].
@@ -30,8 +51,21 @@ class VirtualMachineParserImpl extends VirtualMachineParser {
     * @return a vector of bytecodes
     */
   override def parseString(str: String): Vector[ByteCode] = {
+    val instructions = vendorParser.parseString(str)
+    var byteCodes = List[Byte]()
+
+    for(i <- instructions){
+      val instrCode: Byte = lookup.bytecode.getOrElse(i.name, 0)
+      val args: List[Byte] = i.args.map(x => x.toByte).toList
 
 
+      byteCodes = byteCodes ::: args ::: (instrCode :: List())
+    }
+    byteCodeParser.parse(byteCodes.toVector)
+
+  }
+
+  def private parseInstructions(Vector[Instruction]) = {
 
   }
 }

@@ -13,7 +13,6 @@ class Iconst(value: Int) extends ByteCode  {
     * bytecode in [[ByteCodeValues]]
     */
   override val code: Byte = bytecode.get("iconst").get
-  argnum = 1
 
   /**
     * Returns a new [[VirtualMachine]] after executing this bytecode operation.
