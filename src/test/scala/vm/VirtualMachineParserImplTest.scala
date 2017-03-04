@@ -10,9 +10,17 @@ import vmImpl._
 class VirtualMachineParserImplTest extends FunSuite {
   var v = new VirtualMachineParserImpl();
 
-  /*test("Create object") {
-    v.parseString("icons 4 icons 5 mul")
-    }
-  }*/
+  test("Test - parseString") {
+    val parsedByteCodes = v.parseString("iconst 4\niconst 5\niadd\nprint")
+    println(parsedByteCodes(0))
+    println(parsedByteCodes(1))
+  }
 
-}
+  test("Test - parse") {
+    val f = "/Users/davidasfaha/Documents/Personal/BBK-2017-LOCAL/coursework - shared working/SDP-coursework2/programs/p03.vm"
+    val parsedByteCodes = v.parse(f)
+
+    println(parsedByteCodes(0))
+    println(parsedByteCodes(1))
+  }
+  }

@@ -22,8 +22,9 @@ class PublicVirtualMachineParserSuite extends FunSuite with ByteCodeValues {
     val all = Vector("iconst", "iconst", "iswap", "iadd", "iconst", "iadd",
                      "iconst", "isub", "iconst", "imul", "iconst", "idiv",
                      "iconst", "irem", "ineg", "idec", "iinc", "idup", "print", "print")
+
     for (i <- code.indices) {
-      assert(code(i).code == bytecode(all(i)), s"code did not match for ${all(i)}")
+      assert(code(i).code == bytecode(all(i)), s"code did not match for ${all(i)} -- ${code(i)}")
     }
   }
 

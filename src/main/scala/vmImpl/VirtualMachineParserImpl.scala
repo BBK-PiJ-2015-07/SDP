@@ -28,16 +28,7 @@ class VirtualMachineParserImpl extends VirtualMachineParser {
     */
   override def parse(file: String): Vector[ByteCode] = {
     val instructions = vendorParser.parse(file)
-    var byteCodes = List[Byte]()
-
-    for(i <- instructions){
-      val instrCode: Byte = lookup.bytecode.getOrElse(i.name, 0)
-      val args: List[Byte] = i.args.map(x => x.toByte).toList
-
-
-      byteCodes = byteCodes ::: args ::: (instrCode :: List())
-    }
-    byteCodeParser.parse(byteCodes.toVector)
+    parseInstructions(instructions)
   }
 
   /**
@@ -52,20 +43,19 @@ class VirtualMachineParserImpl extends VirtualMachineParser {
     */
   override def parseString(str: String): Vector[ByteCode] = {
     val instructions = vendorParser.parseString(str)
+
+    parseInstructions(instructions)
+  }
+
+private def  parseInstructions ( instructions: Vector[Instruction]): Vector[ByteCode] = {
     var byteCodes = List[Byte]()
 
     for(i <- instructions){
       val instrCode: Byte = lookup.bytecode.getOrElse(i.name, 0)
       val args: List[Byte] = i.args.map(x => x.toByte).toList
-
-
-      byteCodes = byteCodes ::: args ::: (instrCode :: List())
+      byteCodes = byteCodes ::: (instrCode :: List()) ::: args
     }
     byteCodeParser.parse(byteCodes.toVector)
-
-  }
-
-  def private parseInstructions(Vector[Instruction]) = {
 
   }
 }

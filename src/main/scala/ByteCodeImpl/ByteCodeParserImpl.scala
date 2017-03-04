@@ -26,7 +26,7 @@ class ByteCodeParserImpl extends ByteCodeParser {
     for (i <-  0  until bc.length) {
       //if(!) {
         var curr = bc(i)
-        if (curr == 1) {
+        if (curr == 1 && !wasIconst) {
           byteCodes = byteCodes :+ factory.make(bc(i), bc(i + 1).toInt)
           wasIconst = true
 
@@ -35,6 +35,9 @@ class ByteCodeParserImpl extends ByteCodeParser {
             wasIconst = false
           else
             byteCodes = byteCodes :+ factory.make(bc(i))
+
+        } else{
+          wasIconst = false
 
         }
     }
