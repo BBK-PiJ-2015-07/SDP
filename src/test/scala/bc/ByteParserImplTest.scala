@@ -19,13 +19,10 @@ class ByteCodeParserImplTest extends FunSuite {
      , bcl.bytecode.getOrElse("iadd",0), bcl.bytecode.getOrElse("print", 0)))
 
     assert(testVector(0).code == testVector(0).bytecode.getOrElse("iconst", 0))
-
-/*
-    res21: scala.collection.immutable.Map[String,Byte] = Map(ineg -> 7, iswap -> 11, idiv -> 5,
-     print -> 12, iinc -> 8, imul -> 4, iconst -> 1, idec -> 9, isub -> 3, irem -> 6, idup -> 10, iadd -> 2)
-
-    */
-
+    assert(testVector(1).code == testVector(1).bytecode.getOrElse("iconst", 0))
+    assert(testVector(2).code == testVector(2).bytecode.getOrElse("iadd", 0))
+    assert(testVector(3).code == testVector(3).bytecode.getOrElse("print", 0))
+    
 
   }
 }

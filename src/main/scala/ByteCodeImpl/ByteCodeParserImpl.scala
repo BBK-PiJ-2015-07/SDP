@@ -23,17 +23,20 @@ class ByteCodeParserImpl extends ByteCodeParser {
 
     var wasIconst = false
 
-    for (i <- 1 until bc.length) {
-      if(!wasIconst) {
+    for (i <-  0  until bc.length) {
+      //if(!) {
         var curr = bc(i)
         if (curr == 1) {
           byteCodes = byteCodes :+ factory.make(bc(i), bc(i + 1).toInt)
           wasIconst = true
-        } else {
-          byteCodes = byteCodes :+ factory.make(bc(i))
-          wasIconst = false
+
+        } else if(curr != 1) {
+          if(wasIconst)
+            wasIconst = false
+          else
+            byteCodes = byteCodes :+ factory.make(bc(i))
+
         }
-      }
     }
     byteCodes.toVector
   }
