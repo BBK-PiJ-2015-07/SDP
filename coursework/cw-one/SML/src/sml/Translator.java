@@ -2,7 +2,9 @@ package sml;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Constructor;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -17,9 +19,12 @@ public class Translator {
 
 
     //Work
-    private static final String PATH = "/Users/apinter/Documents/GIT/gitrepos/SDP/My_SDP/SDP/coursework/cw-one/SML/out/production/SML/";
+    //private static final String PATH = "/Users/apinter/Documents/GIT/gitrepos/SDP/My_SDP/SDP/coursework/cw-one/SML/out/production/SML/";
 
     //Home
+    private static final String PATH = "/Users/Case/Documents/Uni/SDP/My_SDP/SDP/coursework/cw-one/SML/out/production/SML/";
+
+
 
     // word + line is the part of the current line that's not yet processed
     // word has no whitespace
@@ -92,7 +97,47 @@ public class Translator {
             return null;
 
         String ins = scan();
-        switch (ins) {
+
+
+        //TODO: refactor below
+        String className = ins.substring(0, 1).toUpperCase() + ins.substring(1) + "Instruction";
+        System.out.println("Classname parsed: " + className);
+
+        Class insClass;
+
+        try {
+            insClass = Class.forName(className);
+        }catch(ClassNotFoundException e){
+            return null;
+            //e.printStackTrace();
+        }
+        Constructor[] cs = insClass.getConstructors();
+        Constructor ctr;
+        Class[] paramTypes;
+
+        //Constructor that takes at least one int (as registers are always specified
+        for(Constructor c: cs){
+            Class[] ps = c.getParameterTypes();
+
+            if(Arrays.asList(ps).contains(int.class)){
+                ctr = c;
+                paramTypes = ps;
+                break;
+            }
+        }
+        Object[] constArgs = new Object[paramTypes.length];
+
+        for(int i=0; i < paramTypes.length; i++){
+            if(paramTypes[i].getSimpleName() == "int"){
+                constArgs[i] = scanInt();
+            }else{
+                constArgs[i] = scan();
+            }
+        }
+
+        return (insClass.class)ctr.newInstance(constArgs);
+
+        /*switch (ins) {
             case "add":
                 r = scanInt();
                 s1 = scanInt();
@@ -124,11 +169,11 @@ public class Translator {
                 r = scanInt();
                 label2 = scan();
                 return new BnzInstruction(label, r, label2);
-        }
+        }*/
 
         // You will have to write code here for the other instructions.
 
-        return null;
+        //return null;
     }
 
     /*
