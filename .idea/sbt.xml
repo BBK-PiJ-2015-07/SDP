@@ -12,6 +12,7 @@
           </set>
         </option>
         <option name="resolveSbtClassifiers" value="true" />
+        <option name="sbtVersion" value="0.13.8" />
         <option name="useAutoImport" value="true" />
         <option name="useOurOwnAutoImport" value="true" />
       </SbtProjectSettings>
@@ -36,6 +37,7 @@
             <option value="$PROJECT_DIR$/exercises/week03/project" />
           </set>
         </option>
+        <option name="sbtVersion" value="0.13.8" />
         <option name="useAutoImport" value="true" />
         <option name="useOurOwnAutoImport" value="true" />
       </SbtProjectSettings>
