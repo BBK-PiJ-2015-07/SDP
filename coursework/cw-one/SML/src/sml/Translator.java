@@ -140,7 +140,7 @@ public class Translator {
         Object[] constArgs = new Object[paramTypes.length];
         constArgs[0] = ins;
 
-        for(int i=1; i < paramTypes.length-2; i++){
+        for(int i=1; i < paramTypes.length; i++){
             if(paramTypes[i].getSimpleName() == "int"){
                 constArgs[i] = scanInt();
             }else{
