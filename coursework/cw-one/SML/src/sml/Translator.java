@@ -88,6 +88,13 @@ public class Translator {
     // removed. Translate line into an instruction with label label
     // and return the instruction
     public Instruction getInstruction(String label) {
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("\n\n----------- IN GETINSTRUCTION ---------------------");
         int s1; // Possible operands of the instruction
         int s2;
         int r;
@@ -98,16 +105,17 @@ public class Translator {
             return null;
 
         String ins = scan();
-
+        System.out.println("\n getInstruction, after first scan: " + ins);
 
         //TODO: refactor below
         String className = "sml." + ins.substring(0, 1).toUpperCase() + ins.substring(1) + "Instruction";
-        System.out.println("Classname parsed: " + className);
+        //System.out.println("Classname parsed: " + className);
 
         Class insClass;
 
         try {
             insClass = Class.forName(className);
+            System.out.println("\ninsClass: " + insClass.getName());
         }catch(ClassNotFoundException e){
             return null;
             //e.printStackTrace();
@@ -126,14 +134,23 @@ public class Translator {
                 break;
             }
         }
-        Object[] constArgs = new Object[paramTypes.length];
 
-        for(int i=0; i < paramTypes.length; i++){
+        System.out.println("\n -------- Chosen constructor, toString: " + ctr.toString());
+
+        Object[] constArgs = new Object[paramTypes.length];
+        constArgs[0] = ins;
+
+        for(int i=1; i < paramTypes.length-2; i++){
             if(paramTypes[i].getSimpleName() == "int"){
                 constArgs[i] = scanInt();
             }else{
                 constArgs[i] = scan();
             }
+        }
+
+        System.out.println("\n---- Args of constructor: " );
+        for(Object ar : constArgs){
+            System.out.println("arg: " + ar.toString());
         }
 
         Object res = null;
@@ -154,7 +171,7 @@ public class Translator {
 
 
 
-      /*  switch (ins) {
+        /*switch (ins) {
             case "add":
                 r = scanInt();
                 s1 = scanInt();
