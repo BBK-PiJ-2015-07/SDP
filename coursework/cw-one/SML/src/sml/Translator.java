@@ -88,24 +88,19 @@ public class Translator {
     // removed. Translate line into an instruction with label label
     // and return the instruction
     public Instruction getInstruction(String label) {
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
         System.out.println("\n\n----------- IN GETINSTRUCTION ---------------------");
-        int s1; // Possible operands of the instruction
+       /* int s1; // Possible operands of the instruction
         int s2;
         int r;
         int x;
-        String label2;
+        String label2;*/
 
         if (line.equals(""))
             return null;
 
         String ins = scan();
-        System.out.println("\n getInstruction, after first scan: " + ins);
+        //System.out.println("\n getInstruction, after first scan: " + ins);
 
         //TODO: refactor below
         String className = "sml." + ins.substring(0, 1).toUpperCase() + ins.substring(1) + "Instruction";
@@ -121,6 +116,7 @@ public class Translator {
             //e.printStackTrace();
         }
         Constructor[] cs = insClass.getConstructors();
+        System.out.println("\n------ How many constructors: " + cs.length);
         Constructor ctr = null;
         Class[] paramTypes = null;
 
@@ -242,4 +238,6 @@ public class Translator {
             return Integer.MAX_VALUE;
         }
     }
+
+
 }
