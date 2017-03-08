@@ -1,7 +1,8 @@
 package sml;
 
 /**
- * Created by apinter on 07/03/2017.
+ * Created by Andras Pinter on 07/03/2017.
+ * Divides the value stored in op1 register by the value stored in op2 register.
  */
 public class DivInstruction extends Instruction {
     private int result;
@@ -28,6 +29,6 @@ public class DivInstruction extends Instruction {
 
     @Override
     public String toString() {
-        return super.toString() + " " + op1 + " / " + op2 + " to " + result;
+        return super.toString() + " reg " + op1 + " / reg " + op2 + " to reg " + result;
     }
 }

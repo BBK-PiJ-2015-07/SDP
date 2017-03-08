@@ -1,7 +1,8 @@
 package sml;
 
 /**
- * Created by apinter on 07/03/2017.
+ * Created by Andras Pinter on 07/03/2017.
+ * Branch to label if the value stored in register is not zero.
  */
 public class BnzInstruction extends Instruction{
 

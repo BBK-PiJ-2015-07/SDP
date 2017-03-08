@@ -1,7 +1,8 @@
 package sml;
 
 /**
- * Created by apinter on 07/03/2017.
+ * Created by Andras Pinter on 07/03/2017.
+ * Prints out value in specified register.
  */
 public class OutInstruction extends Instruction {
     private int register;
@@ -22,6 +23,6 @@ public class OutInstruction extends Instruction {
 
     @Override
     public String toString() {
-        return super.toString() + " register " + register;
+        return super.toString() + " reg " + register;
     }
 }
