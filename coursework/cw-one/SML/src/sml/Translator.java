@@ -14,11 +14,6 @@ import java.util.Scanner;
  */
 public class Translator {
 
-    //private static final String PATH = "/Users/keith/Courses/sdp/SDP-2017/coursework/cw-one/";
-
-    //private static final String PATH = "/Users/apinter/Documents/GIT/gitrepos/coursework/cw-one/out/production/SML/";
-
-
     //Work
     private static final String PATH = "/Users/apinter/Documents/GIT/gitrepos/SDP/My_SDP/SDP/coursework/cw-one/SML/out/production/SML/";
 
@@ -89,121 +84,46 @@ public class Translator {
     // and return the instruction
     public Instruction getInstruction(String label) {
 
-        System.out.println("\n\n----------- IN GETINSTRUCTION ---------------------");
-       /* int s1; // Possible operands of the instruction
-        int s2;
-        int r;
-        int x;
-        String label2;*/
-
         if (line.equals(""))
             return null;
 
         String ins = scan();
-        //System.out.println("\n getInstruction, after first scan: " + ins);
-
-        //TODO: refactor below
         String className = "sml." + ins.substring(0, 1).toUpperCase() + ins.substring(1) + "Instruction";
-        //System.out.println("Classname parsed: " + className);
-
         Class insClass;
+        try { insClass = Class.forName(className);
+        } catch(ClassNotFoundException e){ return null; }
 
-        try {
-            insClass = Class.forName(className);
-            System.out.println("\ninsClass: " + insClass.getName());
-        }catch(ClassNotFoundException e){
-            return null;
-            //e.printStackTrace();
-        }
         Constructor[] cs = insClass.getConstructors();
-        System.out.println("\n------ How many constructors: " + cs.length);
-        Constructor ctr = null;
+        Constructor constr = null;
         Class[] paramTypes = null;
-
-        //Constructor that takes at least one int (as registers are always specified
         for(Constructor c: cs){
             Class[] ps = c.getParameterTypes();
-
             if(Arrays.asList(ps).contains(int.class)){
-                ctr = c;
+                constr = c;
                 paramTypes = ps;
                 break;
             }
         }
 
-        System.out.println("\n -------- Chosen constructor, toString: " + ctr.toString());
-
-        Object[] constArgs = new Object[paramTypes.length];
-        constArgs[0] = ins;
+        Object[] constrArgs = new Object[paramTypes.length];
+        constrArgs[0] = ins;
 
         for(int i=1; i < paramTypes.length; i++){
             if(paramTypes[i].getSimpleName() == "int"){
-                constArgs[i] = scanInt();
+                constrArgs[i] = scanInt();
             }else{
-                constArgs[i] = scan();
+                constrArgs[i] = scan();
             }
         }
 
-        System.out.println("\n---- Args of constructor: " );
-        for(Object ar : constArgs){
-            System.out.println("arg: " + ar.toString());
-        }
-
-        Object res = null;
+        Object instruction = null;
         try {
-            res = ctr.newInstance(constArgs);
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-            return null;
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-            return null;
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-            return null;
-        }
-        Instruction instr = ((Instruction) res);
-        return instr;
+            instruction = constr.newInstance(constrArgs);
+        } catch (InstantiationException e) { return null;
+        } catch (IllegalAccessException e) { return null;
+        } catch (InvocationTargetException e) { return null; }
 
-
-
-        /*switch (ins) {
-            case "add":
-                r = scanInt();
-                s1 = scanInt();
-                s2 = scanInt();
-                return new AddInstruction(label, r, s1, s2);
-            case "lin":
-                r = scanInt();
-                s1 = scanInt();
-                return new LinInstruction(label, r, s1);
-            case "sub":
-                r = scanInt();
-                s1 = scanInt();
-                s2 = scanInt();
-                return new SubInstruction(label, r, s1, s2);
-            case "mul":
-                r = scanInt();
-                s1 = scanInt();
-                s2 = scanInt();
-                return new MulInstruction(label, r, s1, s2);
-            case "div":
-                r = scanInt();
-                s1 = scanInt();
-                s2 = scanInt();
-                return new DivInstruction(label, r, s1, s2);
-            case "out":
-                r = scanInt();
-                return new OutInstruction(label, r);
-            case "bnz":
-                r = scanInt();
-                label2 = scan();
-                return new BnzInstruction(label, r, label2);
-        }
-
-        // You will have to write code here for the other instructions.
-
-        return null;*/
+        return (Instruction) instruction;
     }
 
     /*
