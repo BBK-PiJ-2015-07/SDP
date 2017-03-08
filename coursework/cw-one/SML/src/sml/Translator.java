@@ -3,6 +3,7 @@ package sml;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
@@ -19,10 +20,10 @@ public class Translator {
 
 
     //Work
-    //private static final String PATH = "/Users/apinter/Documents/GIT/gitrepos/SDP/My_SDP/SDP/coursework/cw-one/SML/out/production/SML/";
+    private static final String PATH = "/Users/apinter/Documents/GIT/gitrepos/SDP/My_SDP/SDP/coursework/cw-one/SML/out/production/SML/";
 
     //Home
-    private static final String PATH = "/Users/Case/Documents/Uni/SDP/My_SDP/SDP/coursework/cw-one/SML/out/production/SML/";
+    //private static final String PATH = "/Users/Case/Documents/Uni/SDP/My_SDP/SDP/coursework/cw-one/SML/out/production/SML/";
 
 
 
@@ -100,7 +101,7 @@ public class Translator {
 
 
         //TODO: refactor below
-        String className = ins.substring(0, 1).toUpperCase() + ins.substring(1) + "Instruction";
+        String className = "sml." + ins.substring(0, 1).toUpperCase() + ins.substring(1) + "Instruction";
         System.out.println("Classname parsed: " + className);
 
         Class insClass;
@@ -112,8 +113,8 @@ public class Translator {
             //e.printStackTrace();
         }
         Constructor[] cs = insClass.getConstructors();
-        Constructor ctr;
-        Class[] paramTypes;
+        Constructor ctr = null;
+        Class[] paramTypes = null;
 
         //Constructor that takes at least one int (as registers are always specified
         for(Constructor c: cs){
@@ -135,9 +136,25 @@ public class Translator {
             }
         }
 
-        return (insClass.class)ctr.newInstance(constArgs);
+        Object res = null;
+        try {
+            res = ctr.newInstance(constArgs);
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+            return null;
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+            return null;
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+            return null;
+        }
+        Instruction instr = ((Instruction) res);
+        return instr;
 
-        /*switch (ins) {
+
+
+      /*  switch (ins) {
             case "add":
                 r = scanInt();
                 s1 = scanInt();
@@ -169,11 +186,11 @@ public class Translator {
                 r = scanInt();
                 label2 = scan();
                 return new BnzInstruction(label, r, label2);
-        }*/
+        }
 
         // You will have to write code here for the other instructions.
 
-        //return null;
+        return null;*/
     }
 
     /*
