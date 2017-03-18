@@ -3,9 +3,8 @@ package ByteCodeImpl
 import bc.ByteCode
 import vm.VirtualMachine
 
-/**
-  * Created by davidasfaha on 25/02/2017.
-  */
+/* Implements the duplication byte code - it adds the bytecode at the top of the stack again
+ */
 class Idup extends ByteCode {
   /**
     * A unique byte value representing the bytecode. An implementation
@@ -15,7 +14,7 @@ class Idup extends ByteCode {
   override val code: Byte = bytecode.get("idup").get
 
   /**
-    * Returns a new [[VirtualMachine]] after executing this bytecode operation.
+    * Returns a new [[VirtualMachine]] after executing the duplication operation.
     *
     * @param vm the initial virtual machine
     * @return a new virtual machine

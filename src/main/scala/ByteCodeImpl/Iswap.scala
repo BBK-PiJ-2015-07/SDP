@@ -3,9 +3,8 @@ package ByteCodeImpl
 import bc.ByteCode
 import vm.VirtualMachine
 
-/**
-  * Created by davidasfaha on 25/02/2017.
-  */
+/* Implements the swap byte code - it swaps the top two byte code's position
+ */
 class Iswap extends ByteCode  {
   /**
     * A unique byte value representing the bytecode. An implementation
@@ -15,7 +14,7 @@ class Iswap extends ByteCode  {
   override val code: Byte = bytecode.get("iswap").get
 
   /**
-    * Returns a new [[VirtualMachine]] after executing this bytecode operation.
+    * Returns a new [[VirtualMachine]] after executing the swap operation.
     *
     * @param vm the initial virtual machine
     * @return a new virtual machine

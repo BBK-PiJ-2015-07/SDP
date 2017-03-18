@@ -3,9 +3,8 @@ package ByteCodeImpl
 import bc.ByteCode
 import vm.VirtualMachine
 
-/**
-  * Created by Case on 25/02/2017.
-  */
+/* Implements the subtration byte code
+ */
 class Isub extends ByteCode  {
   /**
     * A unique byte value representing the bytecode. An implementation
@@ -17,7 +16,7 @@ class Isub extends ByteCode  {
 
 
   /**
-    * Returns a new [[VirtualMachine]] after executing this bytecode operation.
+    * Returns a new [[VirtualMachine]] after executing the subtraction operation.
     *
     * @param vm the initial virtual machine
     * @return a new virtual machine
