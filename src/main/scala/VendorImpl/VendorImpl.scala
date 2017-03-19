@@ -10,6 +10,8 @@ import vendor.Instruction
 
 /**
   * Created by davidasfaha on 25/02/2017.
+  * A vendor implementation of ProgramParser which parses a file or string containing a sequence
+  * of bytecode programs in textual format.
   */
 class VendorImpl extends ProgramParser {
   /**
