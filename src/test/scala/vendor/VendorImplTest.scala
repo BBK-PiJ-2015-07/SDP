@@ -24,6 +24,16 @@ class VendorImplTest extends FunSuite{
     assert(instructions.length == 0)
   }
 
+  test("Empty file returns empty InstructionList"){
+    //Dave's test path
+    //val f = "/Users/davidasfaha/Documents/Personal/BBK-2017-LOCAL/coursework - shared working/SDP-coursework2/programs/NoProg.vm"
+
+    //Andras' test path
+    val f = "/Users/Case/Documents/Uni/SDP/CW2/SDP-coursework2/programs/NoProg.vm"
+    val instructions: Vector[Instruction] = vi.parse(f)
+    assert(instructions.length == 0)
+  }
+
   test("InvalidInstructionFormatException on string argument") {
     val testStr = "iconst 5 45 ttt"
 
