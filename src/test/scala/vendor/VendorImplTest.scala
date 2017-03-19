@@ -28,8 +28,7 @@ class VendorImplTest extends FunSuite{
 
   }
 
-  test("File is read correctly"){
-
+  test("File p01.vm is read correctly"){
 
     //Dave's test path
     //val f = "/Users/davidasfaha/Documents/Personal/BBK-2017-LOCAL/coursework - shared working/SDP-coursework2/programs/p01.vm"
@@ -41,9 +40,40 @@ class VendorImplTest extends FunSuite{
     val instructions : Vector[Instruction] = vi.parse(f)
     assert(instructions(0).toString == "iconst 4")
     assert(instructions(1).toString == "iconst 5")
-    assert(instructions(2).toString == "iadd ")
-    assert(instructions(3).toString == "print ")
-
+    assert(instructions(2).toString == "iadd")
+    assert(instructions(3).toString == "print")
   }
 
+
+  test("File p03.vm is read correctly"){
+
+    //Dave's test path
+    //val f = "/Users/davidasfaha/Documents/Personal/BBK-2017-LOCAL/coursework - shared working/SDP-coursework2/programs/p03vm"
+
+    //Andras' test path
+    val f = "/Users/Case/Documents/Uni/SDP/CW2/SDP-coursework2/programs/p03.vm"
+
+
+    val instructions : Vector[Instruction] = vi.parse(f)
+    assert(instructions(0).toString == "iconst 7")
+    assert(instructions(1).toString == "iconst 7")
+    assert(instructions(2).toString == "iswap")
+    assert(instructions(3).toString == "iadd")
+    assert(instructions(4).toString == "iconst 2")
+    assert(instructions(5).toString == "iadd")
+    assert(instructions(6).toString == "iconst 4")
+    assert(instructions(7).toString == "isub")
+    assert(instructions(8).toString == "iconst 1")
+    assert(instructions(9).toString == "imul")
+    assert(instructions(10).toString == "iconst 2")
+    assert(instructions(11).toString == "idiv")
+    assert(instructions(12).toString == "iconst 1")
+    assert(instructions(13).toString == "irem")
+    assert(instructions(14).toString == "ineg")
+    assert(instructions(15).toString == "idec")
+    assert(instructions(16).toString == "iinc")
+    assert(instructions(17).toString == "idup")
+    assert(instructions(18).toString == "print")
+    assert(instructions(19).toString == "print")
+  }
 }

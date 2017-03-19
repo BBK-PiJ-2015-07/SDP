@@ -23,5 +23,8 @@ class InvalidInstructionFormatException(msg: String) extends Exception(msg)
   * @param args arguments of the instruction
   */
 class Instruction(val name: String, val args: Vector[Int]) {
-  override def toString: String = name + " " + args.mkString(" ")
+  override def toString: String = args match {
+    case IndexedSeq() => name
+    case _ => name + " " + args.mkString(" ")
+  }
 }

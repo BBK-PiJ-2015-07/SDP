@@ -17,7 +17,12 @@ class VirtualMachineParserImplTest extends FunSuite {
   }
 
   test("Test - parse") {
-    val f = "/Users/davidasfaha/Documents/Personal/BBK-2017-LOCAL/coursework - shared working/SDP-coursework2/programs/p03.vm"
+
+    //Dave's test path
+    //val f = "/Users/davidasfaha/Documents/Personal/BBK-2017-LOCAL/coursework - shared working/SDP-coursework2/programs/p03.vm"
+    //Andras' test path
+    val f = "/Users/Case/Documents/Uni/SDP/CW2/SDP-coursework2/programs/p03.vm"
+
     val parsedByteCodes = v.parse(f)
 
     println(parsedByteCodes(0))

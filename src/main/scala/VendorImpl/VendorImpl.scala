@@ -53,7 +53,6 @@ class VendorImpl extends ProgramParser {
         }
         list = list :+ new Instruction(instrCode, args)
       }
-
     }
     list
 
