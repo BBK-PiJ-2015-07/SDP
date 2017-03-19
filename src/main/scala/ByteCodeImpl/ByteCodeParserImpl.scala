@@ -41,10 +41,8 @@ class ByteCodeParserImpl extends ByteCodeParser {
             wasIconst = false
           else
             byteCodes = byteCodes :+ factory.make(bc(i))
-
         } else{
           wasIconst = false
-
         }
     }
     byteCodes.toVector

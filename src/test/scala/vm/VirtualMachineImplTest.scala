@@ -69,9 +69,9 @@ class VirtualMachineImplTest extends FunSuite with BeforeAndAfterEach{
 
   test("executeOne executes one ByteCode and returns the rest of the ByteCode vector with new virtual machine"){
     val testVector: Vector[ByteCode] =  byteCodeParser.parse(Vector(bcl.bytecode.getOrElse("iconst", 0), 4.toByte,
-      bcl.bytecode.getOrElse("iconst", 0), 5.toByte,
-      bcl.bytecode.getOrElse("iadd",0),
-      bcl.bytecode.getOrElse("print", 0)))
+                                                                    bcl.bytecode.getOrElse("iconst", 0), 5.toByte,
+                                                                    bcl.bytecode.getOrElse("iadd",0),
+                                                                    bcl.bytecode.getOrElse("print", 0)))
     val res1 = vm.executeOne(testVector)
     assert(res1._1.length == 3)
     assert(res1._1(0).code == bcl.bytecode.getOrElse("iconst", 0))

@@ -20,7 +20,7 @@ class PublicByteCodeFactorySuite extends FunSuite with ByteCodeValues {
   }
 
   test("[3] an invalid bytecode should throw an exception") {
-    intercept[MachineUnderflowException] {
+    intercept[InvalidBytecodeException] {
       bcf.make(99)
     }
   }

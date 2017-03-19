@@ -10,14 +10,12 @@ import vm.MachineUnderflowException
   */
 class ByteCodeParserImplTest extends FunSuite {
 
-
   var byteCodeParser = new ByteCodeParserImpl()
   var bcl = new ByteCodeLookUp()
 
   test("Test vector") {
    val testVector: Vector[ByteCode] =  byteCodeParser.parse(Vector(bcl.bytecode.getOrElse("iconst", 0), 4.toByte, bcl.bytecode.getOrElse("iconst", 0), 5.toByte
      , bcl.bytecode.getOrElse("iadd",0), bcl.bytecode.getOrElse("print", 0)))
-
   }
 
   test("Test empty vector") {
@@ -30,5 +28,4 @@ class ByteCodeParserImplTest extends FunSuite {
       val testVector: Vector[ByteCode] =  byteCodeParser.parse(Vector(bcl.bytecode.getOrElse("iconst",0)))
     }
   }
-
-  }
+}
