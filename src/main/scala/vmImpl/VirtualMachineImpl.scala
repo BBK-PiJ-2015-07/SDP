@@ -25,14 +25,23 @@ class VirtualMachineImpl extends VirtualMachine {
     * @param bc a vector of bytecodes
     * @return a new virtual machine
     */
-  override def execute(bc: Vector[ByteCode]): VirtualMachine = {
+  /*override def execute(bc: Vector[ByteCode]): VirtualMachine = {
     if(bc.isEmpty){
       this
     }else {
       val (bcs, vm) = executeOne(bc)
       vm.execute(bcs)
     }
+  }*/
+
+
+  override def execute(bc: Vector[ByteCode]): VirtualMachine = bc match {
+    case x +: xs => { val (bcs, vm) = executeOne(bc);      vm.execute(bcs)}
+    case _ =>  this
   }
+
+
+
 
   /**
     * Executes the next bytecode in the vector of bytecodes.
