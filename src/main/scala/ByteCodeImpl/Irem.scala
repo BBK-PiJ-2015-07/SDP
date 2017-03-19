@@ -3,9 +3,8 @@ package ByteCodeImpl
 import bc.ByteCode
 import vm.VirtualMachine
 
-/**
-  * Created by Case on 25/02/2017.
-  */
+/* Implements the remainder byte code - it returns the reminder of a dvision operation between two values
+ */
 class Irem extends ByteCode  {
   /**
     * A unique byte value representing the bytecode. An implementation
@@ -15,7 +14,7 @@ class Irem extends ByteCode  {
   override val code: Byte =  bytecode.get("irem").get
 
   /**
-    * Returns a new [[VirtualMachine]] after executing this bytecode operation.
+    * Returns a new [[VirtualMachine]] after executing this remainder operation.
     *
     * @param vm the initial virtual machine
     * @return a new virtual machine

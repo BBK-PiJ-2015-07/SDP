@@ -3,7 +3,7 @@ package ByteCodeImpl
 import bc.ByteCodeValues
 
 /**
-  * Created by Case on 25/02/2017.
+  * A lookup of bytecode to name
   */
 class ByteCodeLookUp extends ByteCodeValues{
 

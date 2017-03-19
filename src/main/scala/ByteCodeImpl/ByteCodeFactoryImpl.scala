@@ -4,11 +4,9 @@ import bc.{ByteCode, ByteCodeFactory, ByteCodeValues, InvalidBytecodeException}
 import java.lang.Class
 import java.lang.reflect.Constructor
 
-//import ByteCodeImpl.DUMMYByteCode
-//import ByteCodeImpl.ByteCodeLookUp
-/**
-  * Created by Case on 25/02/2017.
-  */
+/*
+* Created by Case on 25/02/2017.
+*/
 class ByteCodeFactoryImpl extends ByteCodeFactory{
 
 
@@ -51,16 +49,6 @@ class ByteCodeFactoryImpl extends ByteCodeFactory{
 
     commandByteCode.asInstanceOf[ByteCode]
 
-  //  lookUp
-/*
-    Constructor constructor = MyObject.class.getConstructor(String.class);
-
-    MyObject myObject = (MyObject) constructor.newInstance("constructor-arg1");
-
-
-
-
-    new Print*/
   }
 
 

@@ -2,6 +2,7 @@ package bc
 
 import factory.VirtualMachineFactory
 import org.scalatest.FunSuite
+import vm.MachineUnderflowException
 
 class PublicByteCodeFactorySuite extends FunSuite with ByteCodeValues {
   val bcf = VirtualMachineFactory.byteCodeFactory
@@ -19,7 +20,7 @@ class PublicByteCodeFactorySuite extends FunSuite with ByteCodeValues {
   }
 
   test("[3] an invalid bytecode should throw an exception") {
-    intercept[InvalidBytecodeException] {
+    intercept[MachineUnderflowException] {
       bcf.make(99)
     }
   }

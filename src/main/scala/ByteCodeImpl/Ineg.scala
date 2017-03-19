@@ -3,9 +3,8 @@ package ByteCodeImpl
 import bc.ByteCode
 import vm.VirtualMachine
 
-/**
-  * Created by Case on 25/02/2017.
-  */
+/* Implements the negation byte code
+ */
 class Ineg extends ByteCode {
   /**
     * A unique byte value representing the bytecode. An implementation
@@ -15,7 +14,7 @@ class Ineg extends ByteCode {
   override val code: Byte = bytecode.get("ineg").get
 
   /**
-    * Returns a new [[VirtualMachine]] after executing this bytecode operation.
+    * Returns a new [[VirtualMachine]] after executing the negation operation.
     *
     * @param vm the initial virtual machine
     * @return a new virtual machine
