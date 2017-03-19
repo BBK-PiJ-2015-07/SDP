@@ -7,6 +7,10 @@ package vmImpl
 import bc.ByteCode
 import vm.{MachineUnderflowException, VirtualMachine}
 
+/**
+  * Implementation of a stack-based virtual machine.
+  * It is capable of executing a vector of [[bc.ByteCode]] values.
+  */
 class VirtualMachineImpl extends VirtualMachine {
 
   var stack = List[Int]()
