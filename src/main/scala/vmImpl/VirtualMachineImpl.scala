@@ -25,7 +25,7 @@ class VirtualMachineImpl extends VirtualMachine {
     * @param bc a vector of bytecodes
     * @return a new virtual machine
     */
-  /*override def execute(bc: Vector[ByteCode]): VirtualMachine = {
+ /* override def execute(bc: Vector[ByteCode]): VirtualMachine = {
     if(bc.isEmpty){
       this
     }else {
@@ -33,15 +33,10 @@ class VirtualMachineImpl extends VirtualMachine {
       vm.execute(bcs)
     }
   }*/
-
-
   override def execute(bc: Vector[ByteCode]): VirtualMachine = bc match {
-    case x +: xs => { val (bcs, vm) = executeOne(bc);      vm.execute(bcs)}
+    case x +: xs => { val (bcs, vm) = executeOne(bc); vm.execute(bcs)}
     case _ =>  this
   }
-
-
-
 
   /**
     * Executes the next bytecode in the vector of bytecodes.
@@ -56,9 +51,11 @@ class VirtualMachineImpl extends VirtualMachine {
     * @return a tuple of a new vector of bytecodes and virtual machine
     */
   override def executeOne(bc: Vector[ByteCode]): (Vector[ByteCode], VirtualMachine) = {
-    val instr = bc(0)
+   /* val instr = bc(0)
     val rest = bc.tail
-    (rest, instr.execute(this))
+    (rest, instr.execute(this))*/
+
+   (bc.tail, bc(0).execute(this))
   }
 
   /**
