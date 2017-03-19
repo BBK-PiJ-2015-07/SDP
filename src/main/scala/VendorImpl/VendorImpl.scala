@@ -1,4 +1,6 @@
 package VendorImpl
+import java.io
+import java.io.{FileNotFoundException, IOException}
 import java.lang.NumberFormatException
 
 import scala.io.Source
@@ -22,8 +24,14 @@ class VendorImpl extends ProgramParser {
     * @return an instruction list
     */
   override def parse(file: String): InstructionList = {
-    var all_instructions = scala.io.Source.fromFile(file).mkString
-    parseString(all_instructions)
+    //TODO
+    //Needs try-catch block?
+    try {
+      var all_instructions = scala.io.Source.fromFile(file).mkString
+      parseString(all_instructions)
+    } catch {
+      case ex @ (_ : FileNotFoundException | _ : IOException) => ex.printStackTrace(); throw ex
+    }
   }
 
   /**

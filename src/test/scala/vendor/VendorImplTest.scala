@@ -2,7 +2,7 @@ package vendor
 
 import VendorImpl.VendorImpl
 import org.scalatest.FunSuite
-import java.io.File
+import java.io.{File, FileNotFoundException}
 
 /**
   * To test VendorImpl class
@@ -19,13 +19,29 @@ class VendorImplTest extends FunSuite{
     assert(instructions.length == 4)
   }
 
+  test("Empty string returns empty InstructionList"){
+    val instructions : Vector[Instruction] = vi.parseString("")
+    assert(instructions.length == 0)
+  }
+
   test("InvalidInstructionFormatException on string argument") {
     val testStr = "iconst 5 45 ttt"
 
     assertThrows[InvalidInstructionFormatException] {
       val instructions: Vector[Instruction] = vi.parseString(testStr)
     }
+  }
 
+  test("FileNotFoundException is thrown"){
+    //Dave's test path
+    //val f = "/Users/davidasfaha/Documents/Personal/BBK-2017-LOCAL/coursework - shared working/SDP-coursework2/programs/NoSuchFile.vm"
+
+    //Andras' test path
+    val f = "/Users/Case/Documents/Uni/SDP/CW2/SDP-coursework2/programs/NoSuchFile.vm"
+
+    assertThrows[FileNotFoundException] {
+      val instructions: Vector[Instruction] = vi.parse(f)
+    }
   }
 
   test("File p01.vm is read correctly"){
@@ -44,15 +60,13 @@ class VendorImplTest extends FunSuite{
     assert(instructions(3).toString == "print")
   }
 
-
   test("File p03.vm is read correctly"){
 
     //Dave's test path
-    //val f = "/Users/davidasfaha/Documents/Personal/BBK-2017-LOCAL/coursework - shared working/SDP-coursework2/programs/p03vm"
+    //val f = "/Users/davidasfaha/Documents/Personal/BBK-2017-LOCAL/coursework - shared working/SDP-coursework2/programs/p03.vm"
 
     //Andras' test path
     val f = "/Users/Case/Documents/Uni/SDP/CW2/SDP-coursework2/programs/p03.vm"
-
 
     val instructions : Vector[Instruction] = vi.parse(f)
     assert(instructions(0).toString == "iconst 7")
