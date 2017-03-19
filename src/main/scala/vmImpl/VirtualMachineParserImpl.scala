@@ -10,12 +10,15 @@ import scala.collection.mutable.ListBuffer
 
 /**
   * Created by davidasfaha on 04/03/2017.
+  * Implementation of VirtualMachineParser. It is used to parse a file of bytecode
+  * instructions (as defined by [[vendor.ProgramParser]]).
   */
 class VirtualMachineParserImpl extends VirtualMachineParser {
 
   var vendorParser = new VendorImpl()
   var byteCodeParser = new ByteCodeParserImpl()
   var lookup = new ByteCodeLookUp()
+
   /**
     * Returns a vector of [[bc.ByteCode]].
     *
@@ -43,7 +46,6 @@ class VirtualMachineParserImpl extends VirtualMachineParser {
     */
   override def parseString(str: String): Vector[ByteCode] = {
     val instructions = vendorParser.parseString(str)
-
     parseInstructions(instructions)
   }
 
@@ -56,6 +58,5 @@ private def  parseInstructions ( instructions: Vector[Instruction]): Vector[Byte
       byteCodes = byteCodes ::: (instrCode :: List()) ::: args
     }
     byteCodeParser.parse(byteCodes.toVector)
-
   }
 }
