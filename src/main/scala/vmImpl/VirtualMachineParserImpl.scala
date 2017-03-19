@@ -2,7 +2,7 @@ package vmImpl
 
 import ByteCodeImpl.{ByteCodeLookUp, ByteCodeParserImpl}
 import VendorImpl.VendorImpl
-import bc.ByteCode
+import bc.{ByteCode, InvalidBytecodeException}
 import vendor.{Instruction, ProgramParser}
 import vm._
 
@@ -55,6 +55,10 @@ private def  parseInstructions ( instructions: Vector[Instruction]): Vector[Byte
     for(i <- instructions){
       val instrCode: Byte = lookup.bytecode.getOrElse(i.name, 0)
       val args: List[Byte] = i.args.map(x => x.toByte).toList
+
+      //if bytecode instruction doesn't exist OR the instruction is "iconst" without an argument -> throw InvalidBytecodeException.
+      if((instrCode == 0) || (instrCode == 1 && args.length == 0)){ throw new InvalidBytecodeException("Invalid ByteCode!") }
+
       byteCodes = byteCodes ::: (instrCode :: List()) ::: args
     }
     byteCodeParser.parse(byteCodes.toVector)
