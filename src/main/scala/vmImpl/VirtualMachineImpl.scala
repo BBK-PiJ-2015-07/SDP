@@ -5,7 +5,7 @@ package vmImpl
   */
 
 import bc.ByteCode
-import vm.VirtualMachine
+import vm.{MachineUnderflowException, VirtualMachine}
 
 class VirtualMachineImpl extends VirtualMachine {
 
@@ -68,6 +68,8 @@ class VirtualMachineImpl extends VirtualMachine {
     */
   override def pop(): (Int, VirtualMachine) = {
     var vm = new VirtualMachineImpl()
+    if (stack.isEmpty)
+      throw new MachineUnderflowException("Stack is empty")
     val num = stack.head
     vm.stack = stack.tail
     (num, vm)

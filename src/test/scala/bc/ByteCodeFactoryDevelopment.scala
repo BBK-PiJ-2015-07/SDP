@@ -4,7 +4,7 @@ import ByteCodeImpl._
 import org.scalatest.FunSuite
 
 /**
-  * Created by davidasfaha on 25/02/2017.
+  * Harness to run ByteCodeFactory code -- delete? // TODO delete
   */
 class ByteCodeFactoryDevelopment extends FunSuite {
 
