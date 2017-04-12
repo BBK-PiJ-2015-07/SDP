@@ -12,6 +12,17 @@ class PersonTest extends FunSuite {
   val dude = new Person(firstName, lastName)
 
   test("getFullName works"){
-    assert(dude.getFullName() == firstName + " " + lastName)
+    assert(dude.getFullName == firstName + " " + lastName)
+  }
+
+  test("apply method in Person companion object accepts single String as full name"){
+    val fullName = "DudeFirstName DudeLastName"
+    val newDude = Person(fullName)
+    assert(newDude.getFullName == fullName)
+  }
+
+  test("Person class two parameter constructor works"){
+    assert(dude.getFirstName == firstName )
+    assert(dude.getSurname == lastName)
   }
 }
