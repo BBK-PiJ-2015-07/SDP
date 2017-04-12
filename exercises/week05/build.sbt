@@ -13,6 +13,6 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 libraryDependencies += "org.scala-lang" % "scala-compiler" % scalaVersion.value
 
 // Exclude some folders associated with IntelliJ
-ideaExcludeFolders += ".idea"
+//ideaExcludeFolders += ".idea"
 
-ideaExcludeFolders += ".idea_modules"
+//ideaExcludeFolders += ".idea_modules"

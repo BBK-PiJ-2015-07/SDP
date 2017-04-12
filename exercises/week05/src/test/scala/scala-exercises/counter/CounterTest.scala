@@ -1,6 +1,6 @@
 package counter
 
-import functions.Funcs._
+//import functions.Funcs._
 import org.scalatest.FunSuite
 
 /**
@@ -8,13 +8,15 @@ import org.scalatest.FunSuite
   */
 class CounterTest extends FunSuite {
 
-  var c: Counter = new Counter(0)
-  var c10: Counter = new Counter(0)
+  var c: Counter = new Counter(Option(0))
+  var c10: Counter = new Counter(Option(10))
 
+/*
   override def beforeEach() {
-    c = Counter(0)
-    c10 = Counter(10)
+    c = new Counter(Option(0))
+    c10 = new Counter(Option(0))
   }
+*/
 
   test("Counter constructor creates correct field"){
     assert(c.count == 0)
@@ -38,13 +40,14 @@ class CounterTest extends FunSuite {
   }
 
   test("inc returns new Counter instance"){
-    var cNew: Counter = c inc
+    var cNew: Counter = c.inc()
     assert(cNew.count == c.count + 1)
     assert(c.count == 0)
   }
 
+
   test("dec returns new Counter instance"){
-    var cNew: Counter = c dec
+    var cNew: Counter = c.dec()
     assert(cNew.count == c.count - 1)
     assert(c.count == 0)
   }
