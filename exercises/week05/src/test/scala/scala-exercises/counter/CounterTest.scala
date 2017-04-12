@@ -8,8 +8,8 @@ import org.scalatest.FunSuite
   */
 class CounterTest extends FunSuite {
 
-  var c: Counter = new Counter(Option(0))
-  var c10: Counter = new Counter(Option(10))
+  val c: Counter = new Counter(Option(0))
+  val c10: Counter = new Counter(Option(10))
 
 /*
   override def beforeEach() {
