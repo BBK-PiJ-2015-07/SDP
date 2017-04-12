@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3de5822-0ea8-4628-8819-d3d3dfade870" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Adder.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala" afterPath="$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/scala-exercises/counter/CounterTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/scala-exercises/counter/CounterTest.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -36,8 +38,18 @@
       <file leaf-file-name="Counter.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="272">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Adder.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Adder.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -66,8 +78,8 @@
       <file leaf-file-name="CounterTest.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/scala-exercises/counter/CounterTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="611">
+              <caret line="58" column="43" lean-forward="false" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -92,8 +104,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.sbt" />
-        <option value="$PROJECT_DIR$/src/test/scala/scala-exercises/counter/CounterTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Adder.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/scala-exercises/counter/CounterTest.scala" />
       </list>
     </option>
   </component>
@@ -786,7 +799,7 @@
       <option name="presentableId" value="Default" />
       <updated>1491989903481</updated>
       <workItem from="1491989905072" duration="14000" />
-      <workItem from="1491989957824" duration="7760000" />
+      <workItem from="1491989957824" duration="8708000" />
     </task>
     <task id="LOCAL-00001" summary="Week 5 - added tests to CounterTest, implemented Counter">
       <created>1492004189684</created>
@@ -802,31 +815,17 @@
       <option name="project" value="LOCAL" />
       <updated>1492007005432</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Week 5 - reimplemented Counter as a case class with default value 0">
+      <created>1492011041012</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1492011041012</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CounterTest - 2017.04.12 at 15h 11m 29s.xml">
-      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="CounterTest - 2017.04.12 at 15h 16m 17s.xml">
-      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="CounterTest - 2017.04.12 at 15h 18m 15s.xml">
-      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="CounterTest - 2017.04.12 at 15h 19m 43s.xml">
-      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="CounterTest - 2017.04.12 at 15h 21m 51s.xml">
-      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="CounterTest - 2017.04.12 at 15h 22m 03s.xml">
-      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="CounterTest - 2017.04.12 at 15h 22m 23s.xml">
-      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
     <history-entry file="CounterTest - 2017.04.12 at 16h 26m 45s.xml">
       <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
@@ -836,9 +835,30 @@
     <history-entry file="CounterTest - 2017.04.12 at 16h 29m 52s.xml">
       <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
+    <history-entry file="CounterTest - 2017.04.12 at 16h 38m 05s.xml">
+      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CounterTest - 2017.04.12 at 16h 41m 25s.xml">
+      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CounterTest - 2017.04.12 at 16h 43m 24s.xml">
+      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CounterTest - 2017.04.12 at 16h 43m 28s.xml">
+      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CounterTest - 2017.04.12 at 16h 44m 08s.xml">
+      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CounterTest - 2017.04.12 at 16h 44m 23s.xml">
+      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CounterTest - 2017.04.12 at 16h 45m 23s.xml">
+      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7774000" />
+    <option name="totallyTimeSpent" value="8722000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -885,7 +905,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Week 5 - added tests to CounterTest, implemented Counter" />
     <MESSAGE value="Week 5 - modified Counter to take Option parameter, updated CounterTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week 5 - modified Counter to take Option parameter, updated CounterTest" />
+    <MESSAGE value="Week 5 - reimplemented Counter as a case class with default value 0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 5 - reimplemented Counter as a case class with default value 0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -912,18 +933,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Adder.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/scala-exercises/counter/CounterTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="611">
+          <caret line="58" column="43" lean-forward="false" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state relative-caret-position="272">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding />
         </state>
       </provider>

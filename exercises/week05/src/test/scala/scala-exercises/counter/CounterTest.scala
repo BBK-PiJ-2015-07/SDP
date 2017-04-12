@@ -52,4 +52,14 @@ class CounterTest extends FunSuite {
     assert(c.count == 0)
   }
 
+  test("adjust add works"){
+    val adder_Pos = new Adder(5)
+    val adder_Neg = new Adder(-5)
+    assert(c.adjust(adder_Pos).count == 5)
+    assert(c.adjust(adder_Neg).count == -5)
+
+    assert(c10.adjust(adder_Pos).count == 15)
+    assert(c10.adjust(adder_Neg).count == 5)
+  }
+
 }

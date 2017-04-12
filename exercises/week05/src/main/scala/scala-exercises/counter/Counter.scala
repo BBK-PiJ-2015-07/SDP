@@ -12,4 +12,6 @@ case class Counter(ct: Option[Int]) {
 
   def inc() = { this.copy(Option(count + 1)) }
   def dec() = { this.copy(Option(count - 1)) }
+
+  def adjust(adder: Adder) = { this.copy(Option(adder add count)) }
 }
