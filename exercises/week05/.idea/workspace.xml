@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3de5822-0ea8-4628-8819-d3d3dfade870" name="Default" comment="Week 5 - added tests to CounterTest, implemented Counter">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_modules_scala_parser_combinators_2_12_1_0_4_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_modules_scala_xml_2_12_1_0_6_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_compiler_2_12_1_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_library_2_12_1_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_reflect_2_12_1_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scalactic_scalactic_2_12_3_0_1_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scalatest_scalatest_2_12_3_0_1_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/week05-build.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/week05.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sbt.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/week05.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="a3de5822-0ea8-4628-8819-d3d3dfade870" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala" afterPath="$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/scala-exercises/counter/CounterTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/scala-exercises/counter/CounterTest.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -49,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Counter.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Counter.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+            <state relative-caret-position="238">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -79,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CounterTest.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CounterTest.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/scala-exercises/counter/CounterTest.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="696">
@@ -108,8 +92,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.sbt" />
-        <option value="$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/scala-exercises/counter/CounterTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala" />
       </list>
     </option>
   </component>
@@ -802,7 +786,7 @@
       <option name="presentableId" value="Default" />
       <updated>1491989903481</updated>
       <workItem from="1491989905072" duration="14000" />
-      <workItem from="1491989957824" duration="6104000" />
+      <workItem from="1491989957824" duration="7760000" />
     </task>
     <task id="LOCAL-00001" summary="Week 5 - added tests to CounterTest, implemented Counter">
       <created>1492004189684</created>
@@ -811,16 +795,17 @@
       <option name="project" value="LOCAL" />
       <updated>1492004189684</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Week 5 - modified Counter to take Option parameter, updated CounterTest">
+      <created>1492007005432</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1492007005432</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CounterTest - 2017.04.12 at 15h 10m 46s.xml">
-      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="CounterTest - 2017.04.12 at 15h 11m 16s.xml">
-      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
     <history-entry file="CounterTest - 2017.04.12 at 15h 11m 29s.xml">
       <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
@@ -842,9 +827,18 @@
     <history-entry file="CounterTest - 2017.04.12 at 15h 22m 23s.xml">
       <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
+    <history-entry file="CounterTest - 2017.04.12 at 16h 26m 45s.xml">
+      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CounterTest - 2017.04.12 at 16h 27m 36s.xml">
+      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CounterTest - 2017.04.12 at 16h 29m 52s.xml">
+      <configuration name="CounterTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6118000" />
+    <option name="totallyTimeSpent" value="7774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -890,7 +884,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Week 5 - added tests to CounterTest, implemented Counter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week 5 - added tests to CounterTest, implemented Counter" />
+    <MESSAGE value="Week 5 - modified Counter to take Option parameter, updated CounterTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 5 - modified Counter to take Option parameter, updated CounterTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -909,14 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/films/FilmTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -929,6 +916,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
