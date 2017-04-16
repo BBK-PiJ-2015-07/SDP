@@ -70,6 +70,43 @@ class MyFilmTest extends FunSuite {
     assert(highPlainsDrifter.copy(name = "L’homme des hautes plaines").name == newName.name)
   }
 
+  test("Film apply method returns new object"){
+    val newFilm = Film("Predator", 1987, 7.9, mcTiernan)
+    assert(newFilm != predator)
+    assert(newFilm.name == predator.name)
+    assert(newFilm.yearOfRelease == predator.yearOfRelease)
+    assert(newFilm.imdbRating == predator.imdbRating)
+    assert(newFilm.director == predator.director)
+  }
+
+  test("Film highestRating: film1 rating equal to film2 rating returns film1"){
+    assert(Film.highestRating(outlawJoseyWales, predator) == outlawJoseyWales.imdbRating)
+  }
+
+  test("Film highestRating: film1 rating higher than film2 rating returns film1"){
+    assert(Film.highestRating(memento, invictus) == memento.imdbRating)
+  }
+
+  test("Film highestRating: film1 rating lower than film2 rating returns film2"){
+    assert(Film.highestRating(invictus, memento) == memento.imdbRating)
+  }
+
+
+
+  def oldestDirectorAtTheTime(film1: Film, film2: Film): Director = film1.directorsAge match {
+    case x if x == film2.directorsAge || x > film2.directorsAge => film1.director
+    case _ => film2.director
+  }
+
+
+
+
+
+
+
+
+
+
 
 
 }
