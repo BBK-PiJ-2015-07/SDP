@@ -43,4 +43,13 @@ class MyFilmTest extends FunSuite {
     val mementoCopy = memento.copy()
     assert(memento != mementoCopy)
   }
+
+  test("Copy default values kept"){
+    val invictusCopy = invictus.copy()
+    assert(invictusCopy.name == invictus.name)
+    assert(invictusCopy.yearOfRelease == invictus.yearOfRelease)
+    assert(invictusCopy.imdbRating == invictus.imdbRating)
+    assert(invictusCopy.director == invictus.director)
+  }
+
 }

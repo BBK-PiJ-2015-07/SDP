@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3de5822-0ea8-4628-8819-d3d3dfade870" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/scala-exercises/films/MyFilmTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/week05.iml" afterPath="$PROJECT_DIR$/.idea/modules/week05.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scala-exercises/Director.scala" afterPath="$PROJECT_DIR$/src/main/scala/scala-exercises/Director.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scala-exercises/Film.scala" afterPath="$PROJECT_DIR$/src/main/scala/scala-exercises/Film.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/scala-exercises/person/PersonTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/scala-exercises/person/PersonTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/scala-exercises/films/MyFilmTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/scala-exercises/films/MyFilmTest.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -70,8 +67,8 @@
       <file leaf-file-name="MyFilmTest.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/scala-exercises/films/MyFilmTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+            <state relative-caret-position="445">
+              <caret line="52" column="3" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -111,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/Film.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
+              <caret line="5" column="81" lean-forward="false" selection-start-line="5" selection-start-column="81" selection-end-line="5" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -162,8 +159,8 @@
         <option value="$PROJECT_DIR$/src/test/scala/scala-exercises/counter/CounterTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/scala-exercises/person/Person.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/scala-exercises/Director.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/scala-exercises/Film.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/scala-exercises/person/PersonTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/scala-exercises/Film.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/scala-exercises/films/MyFilmTest.scala" />
       </list>
     </option>
@@ -1032,7 +1029,7 @@
       <workItem from="1491989905072" duration="14000" />
       <workItem from="1491989957824" duration="11941000" />
       <workItem from="1492029837785" duration="92000" />
-      <workItem from="1492339698908" duration="6150000" />
+      <workItem from="1492339698908" duration="6451000" />
     </task>
     <task id="LOCAL-00001" summary="Week 5 - added tests to CounterTest, implemented Counter">
       <created>1492004189684</created>
@@ -1076,7 +1073,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492373350777</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Week 5 - implemented copy method for Film, added MyFilmTest class">
+      <created>1492374522866</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1492374522866</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1086,11 +1090,11 @@
     <history-entry file="MyFilmTest - 2017.04.16 at 21h 27m 45s.xml">
       <configuration name="MyFilmTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
+    <history-entry file="MyFilmTest - 2017.04.16 at 21h 32m 54s.xml">
+      <configuration name="MyFilmTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
     <history-entry file="MyPersonTest - 2017.04.16 at 21h 26m 00s.xml">
       <configuration name="MyPersonTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="PersonTest - 2017.04.16 at 20h 51m 50s.xml">
-      <configuration name="PersonTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
     <history-entry file="PersonTest - 2017.04.16 at 21h 02m 56s.xml">
       <configuration name="PersonTest" configurationId="ScalaTestRunConfiguration" />
@@ -1112,7 +1116,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18197000" />
+    <option name="totallyTimeSpent" value="18498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1129,7 +1133,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1163,7 +1167,8 @@
     <MESSAGE value="Week 5 - added Adder and implemented adjust in Counter" />
     <MESSAGE value="Week 5 - added Person class and PersonTest" />
     <MESSAGE value="Week 5 - added Director and Film classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week 5 - added Director and Film classes" />
+    <MESSAGE value="Week 5 - implemented copy method for Film, added MyFilmTest class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 5 - implemented copy method for Film, added MyFilmTest class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1353,15 +1358,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/Film.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
+          <caret line="5" column="81" lean-forward="false" selection-start-line="5" selection-start-column="81" selection-end-line="5" selection-end-column="81" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/scala-exercises/films/MyFilmTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        <state relative-caret-position="445">
+          <caret line="52" column="3" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
           <folding />
         </state>
       </provider>
