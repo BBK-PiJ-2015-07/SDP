@@ -52,4 +52,12 @@ class MyFilmTest extends FunSuite {
     assert(invictusCopy.director == invictus.director)
   }
 
+  test("Copy default values can be changed"){
+    val granTorinoCopy = granTorino.copy("GT", 2000, 1.1, nolan)
+    assert(granTorinoCopy.name == "GT")
+    assert(granTorinoCopy.yearOfRelease == 2000)
+    assert(granTorinoCopy.imdbRating == 1.1)
+    assert(granTorinoCopy.director == nolan)
+  }
+
 }
