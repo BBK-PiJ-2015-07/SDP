@@ -42,6 +42,11 @@ class MyFilmTest extends FunSuite {
   test("Copy memento creates new object"){
     val mementoCopy = memento.copy()
     assert(memento != mementoCopy)
+
+    //test from exercise sheet
+
+    val i2 = inception.copy().copy().copy()
+    assert(i2 != inception)
   }
 
   test("Copy default values kept"){
@@ -59,5 +64,12 @@ class MyFilmTest extends FunSuite {
     assert(granTorinoCopy.imdbRating == 1.1)
     assert(granTorinoCopy.director == nolan)
   }
+
+  test("copy name test"){
+    val newName = new Film("L’homme des hautes plaines", 1973, 7.7, eastwood)
+    assert(highPlainsDrifter.copy(name = "L’homme des hautes plaines").name == newName.name)
+  }
+
+
 
 }
