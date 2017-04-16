@@ -25,6 +25,4 @@ class PersonTest extends FunSuite {
     assert(dude.getFirstName == firstName )
     assert(dude.getSurname == lastName)
   }
-
-
 }

@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3de5822-0ea8-4628-8819-d3d3dfade870" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../coursework/cw-one/.idea/cw-one.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../coursework/cw-one/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../coursework/cw-one/SML/.idea/SML.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/scala-exercises/Director.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/scala-exercises/Film.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/week05-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/week05-build.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/scala-exercises/films/MyFilmTest.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/week05.iml" afterPath="$PROJECT_DIR$/.idea/modules/week05.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sbt.xml" afterPath="$PROJECT_DIR$/.idea/sbt.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scala-exercises/person/Person.scala" afterPath="$PROJECT_DIR$/src/main/scala/scala-exercises/person/Person.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scala-exercises/Director.scala" afterPath="$PROJECT_DIR$/src/main/scala/scala-exercises/Director.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scala-exercises/Film.scala" afterPath="$PROJECT_DIR$/src/main/scala/scala-exercises/Film.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/scala-exercises/person/PersonTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/scala-exercises/person/PersonTest.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,8 +40,8 @@
       <file leaf-file-name="Counter.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="255">
+              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,8 +60,18 @@
       <file leaf-file-name="PersonTest.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/scala-exercises/person/PersonTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyFilmTest.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/scala-exercises/films/MyFilmTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -87,8 +90,8 @@
       <file leaf-file-name="FilmTest.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/films/FilmTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="425">
+              <caret line="25" column="49" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="25" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -97,18 +100,18 @@
       <file leaf-file-name="Director.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/Director.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="5" column="56" lean-forward="false" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Film.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Film.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/Film.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+            <state relative-caret-position="85">
+              <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -158,9 +161,10 @@
         <option value="$PROJECT_DIR$/src/main/scala/scala-exercises/Person/Person.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/scala-exercises/counter/CounterTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/scala-exercises/person/Person.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/scala-exercises/person/PersonTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/scala-exercises/Director.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/scala-exercises/Film.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/scala-exercises/person/PersonTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/scala-exercises/films/MyFilmTest.scala" />
       </list>
     </option>
   </component>
@@ -232,6 +236,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="person" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises week04" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="week05" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="films" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,24 +431,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
   </component>
-  <component name="RunManager" selected="ScalaTest.PersonTest">
-    <configuration default="false" name="CounterTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="week05" />
-      <setting name="path" value="counter.CounterTest" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="ScalaTest.MyFilmTest">
     <configuration default="false" name="PersonTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="week05" />
@@ -432,40 +449,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="ScalaTests in 'scala-exercises'" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="week05" />
-      <setting name="path" value="" />
-      <setting name="package" value="scala-exercises" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="All in package" />
-      <setting name="showProgressMessages" value="true" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="ScalaTests in 'counter'" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="week05" />
-      <setting name="path" value="" />
-      <setting name="package" value="scala-exercises.counter" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="All in package" />
-      <setting name="showProgressMessages" value="true" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="ScalaTests in 'person'" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="week05" />
@@ -477,6 +460,60 @@
       <setting name="searchForTest" value="Across module dependencies" />
       <setting name="testName" value="" />
       <setting name="testKind" value="All in package" />
+      <setting name="showProgressMessages" value="true" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="FilmTest" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="films.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="films.FilmTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="week05" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="MyPersonTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="week05" />
+      <setting name="path" value="films.MyPersonTest" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="MyFilmTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="week05" />
+      <setting name="path" value="films.MyFilmTest" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
       <setting name="showProgressMessages" value="true" />
       <classRegexps />
       <testRegexps />
@@ -928,19 +965,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="ScalaTest.CounterTest" />
-      <item index="1" class="java.lang.String" itemvalue="ScalaTest.PersonTest" />
-      <item index="2" class="java.lang.String" itemvalue="ScalaTest.ScalaTests in 'scala-exercises'" />
-      <item index="3" class="java.lang.String" itemvalue="ScalaTest.ScalaTests in 'counter'" />
-      <item index="4" class="java.lang.String" itemvalue="ScalaTest.ScalaTests in 'person'" />
+      <item index="0" class="java.lang.String" itemvalue="ScalaTest.PersonTest" />
+      <item index="1" class="java.lang.String" itemvalue="ScalaTest.ScalaTests in 'person'" />
+      <item index="2" class="java.lang.String" itemvalue="Application.FilmTest" />
+      <item index="3" class="java.lang.String" itemvalue="ScalaTest.MyPersonTest" />
+      <item index="4" class="java.lang.String" itemvalue="ScalaTest.MyFilmTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="ScalaTest.PersonTest" />
-        <item index="1" class="java.lang.String" itemvalue="ScalaTest.ScalaTests in 'person'" />
-        <item index="2" class="java.lang.String" itemvalue="ScalaTest.CounterTest" />
-        <item index="3" class="java.lang.String" itemvalue="ScalaTest.ScalaTests in 'counter'" />
-        <item index="4" class="java.lang.String" itemvalue="ScalaTest.ScalaTests in 'scala-exercises'" />
+        <item index="0" class="java.lang.String" itemvalue="ScalaTest.MyFilmTest" />
+        <item index="1" class="java.lang.String" itemvalue="ScalaTest.MyPersonTest" />
+        <item index="2" class="java.lang.String" itemvalue="ScalaTest.PersonTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.FilmTest" />
+        <item index="4" class="java.lang.String" itemvalue="ScalaTest.ScalaTests in 'person'" />
       </list>
     </recent_temporary>
   </component>
@@ -995,7 +1032,7 @@
       <workItem from="1491989905072" duration="14000" />
       <workItem from="1491989957824" duration="11941000" />
       <workItem from="1492029837785" duration="92000" />
-      <workItem from="1492339698908" duration="4993000" />
+      <workItem from="1492339698908" duration="6150000" />
     </task>
     <task id="LOCAL-00001" summary="Week 5 - added tests to CounterTest, implemented Counter">
       <created>1492004189684</created>
@@ -1032,27 +1069,25 @@
       <option name="project" value="LOCAL" />
       <updated>1492013265335</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Week 5 - added Director and Film classes">
+      <created>1492373350777</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1492373350777</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PersonTest - 2017.04.16 at 20h 22m 04s.xml">
-      <configuration name="PersonTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="MyFilmTest - 2017.04.16 at 21h 26m 24s.xml">
+      <configuration name="MyFilmTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="PersonTest - 2017.04.16 at 20h 45m 41s.xml">
-      <configuration name="PersonTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="MyFilmTest - 2017.04.16 at 21h 27m 45s.xml">
+      <configuration name="MyFilmTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="PersonTest - 2017.04.16 at 20h 46m 00s.xml">
-      <configuration name="PersonTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="PersonTest - 2017.04.16 at 20h 46m 47s.xml">
-      <configuration name="PersonTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="PersonTest - 2017.04.16 at 20h 48m 10s.xml">
-      <configuration name="PersonTest" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="PersonTest - 2017.04.16 at 20h 51m 31s.xml">
-      <configuration name="PersonTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="MyPersonTest - 2017.04.16 at 21h 26m 00s.xml">
+      <configuration name="MyPersonTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
     <history-entry file="PersonTest - 2017.04.16 at 20h 51m 50s.xml">
       <configuration name="PersonTest" configurationId="ScalaTestRunConfiguration" />
@@ -1066,9 +1101,18 @@
     <history-entry file="PersonTest - 2017.04.16 at 21h 04m 58s.xml">
       <configuration name="PersonTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
+    <history-entry file="PersonTest - 2017.04.16 at 21h 14m 31s.xml">
+      <configuration name="PersonTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="PersonTest - 2017.04.16 at 21h 19m 36s.xml">
+      <configuration name="PersonTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="PersonTest - 2017.04.16 at 21h 21m 58s.xml">
+      <configuration name="PersonTest" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17040000" />
+    <option name="totallyTimeSpent" value="18197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1118,7 +1162,8 @@
     <MESSAGE value="Week 5 - reimplemented Counter as a case class with default value 0" />
     <MESSAGE value="Week 5 - added Adder and implemented adjust in Counter" />
     <MESSAGE value="Week 5 - added Person class and PersonTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week 5 - added Person class and PersonTest" />
+    <MESSAGE value="Week 5 - added Director and Film classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 5 - added Director and Film classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1265,14 +1310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/person/Person.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1281,34 +1318,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/Director.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="56" lean-forward="false" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/counter/Counter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/scala-exercises/person/PersonTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/films/FilmTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/Director.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="25" column="49" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="25" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/scala-exercises/Film.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        <state relative-caret-position="85">
+          <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/scala-exercises/films/MyFilmTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding />
         </state>
       </provider>
