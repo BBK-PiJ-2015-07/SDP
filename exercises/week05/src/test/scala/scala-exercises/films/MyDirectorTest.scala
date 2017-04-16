@@ -13,7 +13,7 @@ class MyDirectorTest extends  FunSuite{
 
   test("Director companion object works"){
     val compEastwood = Director("Clint", "Eastwood", 1930)
-    assert(eastwood != compEastwood)
+    assert(eastwood ne compEastwood)
     assert(eastwood.name == compEastwood.name)
     assert(eastwood.yearOfBirth == compEastwood.yearOfBirth)
   }
@@ -21,19 +21,19 @@ class MyDirectorTest extends  FunSuite{
   test("older dir1 DOB = dir2 DOB returns dir 1"){
     val dir1 = eastwood
     val dir2 = Director("first", "last", eastwood.yearOfBirth)
-    assert(Director.older(dir1, dir2) == dir1)
+    assert(Director.older(dir1, dir2) eq dir1)
   }
 
   test("older dir1 older than dir2 returns dir 1"){
     val dir1 = eastwood
     val dir2 = Director("first", "last", eastwood.yearOfBirth + 1)
-    assert(Director.older(dir1, dir2) == dir1)
+    assert(Director.older(dir1, dir2) eq dir1)
   }
 
   test("older dir1 younger than dir2 returns dir 2"){
     val dir1 = eastwood
     val dir2 = Director("first", "last", eastwood.yearOfBirth - 1)
-    assert(Director.older(dir1, dir2) == dir2)
+    assert(Director.older(dir1, dir2) eq dir2)
   }
 
 }

@@ -41,12 +41,12 @@ class MyFilmTest extends FunSuite {
 
   test("Copy memento creates new object"){
     val mementoCopy = memento.copy()
-    assert(memento != mementoCopy)
+    assert(memento ne mementoCopy)
 
     //test from exercise sheet
 
     val i2 = inception.copy().copy().copy()
-    assert(i2 != inception)
+    assert(i2 ne inception)
   }
 
   test("Copy default values kept"){
@@ -54,7 +54,7 @@ class MyFilmTest extends FunSuite {
     assert(invictusCopy.name == invictus.name)
     assert(invictusCopy.yearOfRelease == invictus.yearOfRelease)
     assert(invictusCopy.imdbRating == invictus.imdbRating)
-    assert(invictusCopy.director == invictus.director)
+    assert(invictusCopy.director eq invictus.director)
   }
 
   test("Copy default values can be changed"){
@@ -62,7 +62,7 @@ class MyFilmTest extends FunSuite {
     assert(granTorinoCopy.name == "GT")
     assert(granTorinoCopy.yearOfRelease == 2000)
     assert(granTorinoCopy.imdbRating == 1.1)
-    assert(granTorinoCopy.director == nolan)
+    assert(granTorinoCopy.director eq nolan)
   }
 
   test("copy name test"){
@@ -72,11 +72,11 @@ class MyFilmTest extends FunSuite {
 
   test("Film apply method returns new object"){
     val newFilm = Film("Predator", 1987, 7.9, mcTiernan)
-    assert(newFilm != predator)
+    assert(newFilm ne predator)
     assert(newFilm.name == predator.name)
     assert(newFilm.yearOfRelease == predator.yearOfRelease)
     assert(newFilm.imdbRating == predator.imdbRating)
-    assert(newFilm.director == predator.director)
+    assert(newFilm.director eq predator.director)
   }
 
   test("Film highestRating: film1 rating equal to film2 rating returns film1"){
@@ -92,21 +92,31 @@ class MyFilmTest extends FunSuite {
   }
 
 
+  test("oldestDirectorAtTheTime film1 dir older film2 dir age returns film1 dir"){
+    val oldDir = Director("Old", "Older", 1950)
+    val youngDir = Director("Young", "Younger", 1999)
+    val oldFilmDirMov = Film("2000", 2000, 5.5, oldDir)
+    val youngfilmDirMov = Film("2000", 2000, 5.5, youngDir)
 
-  def oldestDirectorAtTheTime(film1: Film, film2: Film): Director = film1.directorsAge match {
-    case x if x == film2.directorsAge || x > film2.directorsAge => film1.director
-    case _ => film2.director
+    assert(Film.oldestDirectorAtTheTime(oldFilmDirMov, youngfilmDirMov) eq oldFilmDirMov.director)
   }
 
+  test("oldestDirectorAtTheTime film2 dir older film1 dir age returns film2 dir"){
+    val oldDir = Director("Old", "Older", 1950)
+    val youngDir = Director("Young", "Younger", 1999)
+    val oldFilmDirMov = Film("2000", 2000, 5.5, oldDir)
+    val youngfilmDirMov = Film("2000", 2000, 5.5, youngDir)
 
+    assert(Film.oldestDirectorAtTheTime(youngfilmDirMov, oldFilmDirMov) eq oldFilmDirMov.director)
+  }
 
+  test("oldestDirectorAtTheTime film1 dir age equals film1 dir age returns film1 dir"){
+    val dir1 = Director("Old", "Older", 1950)
+    val dir2 = Director("Young", "Younger", 1950)
+    val film1 = Film("2000", 2000, 5.5, dir1)
+    val film2 = Film("2000", 2000, 5.5, dir2)
 
-
-
-
-
-
-
-
-
+    assert(Film.oldestDirectorAtTheTime(film1, film2) eq film1.director)
+    assert(Film.oldestDirectorAtTheTime(film2, film1) eq film2.director)
+  }
 }
