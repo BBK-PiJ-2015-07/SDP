@@ -1,21 +1,20 @@
 package factoryWithCaseClasses
 
-import factoryWithCaseClasses.Product.ConcreteProduct
-
 /**
   * Created by Case on 17/04/2017.
   */
 sealed trait Creator {
-//  def makeProduct: Product = new Product("DefaultConcreteProductName", 99)
+  //default factory method as per exercise sheet
+  def makeProduct: Product = Product("DefaultConcreteProductName", 99)
 }
 
+object Creator {
+  case class ConcreteCreator(productName: String, productCode: Int, otherFeature: Option[String] = None) extends Creator {
 
-/*object Creator {
-  case class ConcreteCreator private[Creator] (productName: String, productCode: Int) extends Creator {
-
-    override def makeProduct: Product = new ConcreteProduct(productName, productCode)
-    //def getProductName: String = this.name
-    //def getProductCode: Int = this.code
+    //overridden factory method as per exercise sheet
+    override def makeProduct: Product = otherFeature match {
+      case Some(otherFeature) => Product(productName, productCode, otherFeature)
+      case None => Product(productName, productCode)
+    }
   }
 }
-*/
