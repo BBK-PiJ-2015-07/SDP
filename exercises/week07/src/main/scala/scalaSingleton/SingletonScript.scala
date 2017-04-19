@@ -2,15 +2,16 @@ package scalaSingleton
 
 /**
   * Created by Case on 18/04/2017.
+  * Just demonstrating how the SingletonLazyWithOption class works + it's threadsafe.
   */
 object SingletonScript extends  App {
   println("\nSingletonScript. Creating first SingletonUser")
   //Thread.sleep(2000)
   val su: SingletonUser = new SingletonUser
   //Thread.sleep(2000)
-  println("\nSingletonScript. Creating second SingletonUser")
+//  println("\nSingletonScript. Creating second SingletonUser")
   //Thread.sleep(2000)
-  val su2: SingletonUser = new SingletonUser
+//  val su2: SingletonUser = new SingletonUser
   //Thread.sleep(2000)
 
 
@@ -18,8 +19,8 @@ object SingletonScript extends  App {
   //Thread.sleep(2000)
   new Thread(su).start()
   //Thread.sleep(2000)
-  println("\nSingletonScript. Running second SingletonUser")
+//  println("\nSingletonScript. Running second SingletonUser")
   //Thread.sleep(2000)
-  new Thread(su2).start()
+//  new Thread(su2).start()
 
 }
