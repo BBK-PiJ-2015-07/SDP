@@ -7,7 +7,8 @@ import scalaSingleton.SingletonLazyWithOption.wait
   */
 class SingletonLazyWithOption private () {}
 
-object SingletonLazyWithOption extends Serializable with Cloneable{
+
+object SingletonLazyWithOption extends Serializable {
   private var instance : Option[SingletonLazyWithOption] = None
 
   def getInstance: Option[SingletonLazyWithOption] = instance match {
@@ -28,6 +29,8 @@ object SingletonLazyWithOption extends Serializable with Cloneable{
   //Apparently scala singletons are safe for serialization but the exercise asked for an explicit implementation for making it safe.
   //https://stackoverflow.com/questions/6004742/which-guarantees-do-scalas-singletons-have-regarding-serialization
   def readResolve: AnyRef = instance
+
+  //
   def cloneMe = {println("in cloneMe. "); this.clone()}
   //override def clone(): AnyRef = super.clone()
 

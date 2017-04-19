@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b0f7263-74e1-454e-af52-02a596c37472" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/singleton/SingletonLazyDoubleCheck.scala" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scalaSingleton/SingletonLazyWithOption.scala" afterPath="$PROJECT_DIR$/src/main/scala/scalaSingleton/SingletonLazyWithOption.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scalaSingleton/SingletonScript.scala" afterPath="$PROJECT_DIR$/src/main/scala/scalaSingleton/SingletonScript.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/scalaSingleton/SingletonUser.scala" afterPath="$PROJECT_DIR$/src/main/scala/scalaSingleton/SingletonUser.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -46,8 +44,8 @@
       <file leaf-file-name="SingletonLazyWithOption.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/scalaSingleton/SingletonLazyWithOption.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+            <state relative-caret-position="170">
+              <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -66,8 +64,8 @@
       <file leaf-file-name="SingletonUser.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/scalaSingleton/SingletonUser.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="28" column="3" lean-forward="false" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+            <state relative-caret-position="214">
+              <caret line="18" column="64" lean-forward="false" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -790,7 +788,7 @@
       <workItem from="1492380819514" duration="615000" />
       <workItem from="1492452810100" duration="10395000" />
       <workItem from="1492520835504" duration="2893000" />
-      <workItem from="1492602319630" duration="11946000" />
+      <workItem from="1492602319630" duration="12303000" />
     </task>
     <task id="LOCAL-00001" summary="Week7 - Added exercises">
       <created>1492381295641</created>
@@ -820,11 +818,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492618212716</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Week7 - added CloneNotSupportedException">
+      <created>1492621755521</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1492621755521</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25849000" />
+    <option name="totallyTimeSpent" value="26206000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -874,7 +879,8 @@
     <MESSAGE value="Week7 - Refactored Product trait" />
     <MESSAGE value="Week7 - Implemented Singleton with Option + readResolve for Serialisation" />
     <MESSAGE value="Week7 - Implemented Singleton with Option + readResolve for safe Serialisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week7 - Implemented Singleton with Option + readResolve for safe Serialisation" />
+    <MESSAGE value="Week7 - added CloneNotSupportedException" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week7 - added CloneNotSupportedException" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1011,8 +1017,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/scalaSingleton/SingletonLazyWithOption.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+        <state relative-caret-position="170">
+          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -1027,8 +1033,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/scalaSingleton/SingletonUser.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="28" column="3" lean-forward="false" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+        <state relative-caret-position="214">
+          <caret line="18" column="64" lean-forward="false" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
           <folding />
         </state>
       </provider>

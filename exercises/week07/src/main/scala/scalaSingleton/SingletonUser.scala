@@ -14,16 +14,17 @@ class SingletonUser extends Runnable {
 
 
     println("\n\n----------------- \nTrying to break it with clone()")
+
     var cloneInstance = None
-    println("BEFORE CLONING: cloneInstance hash: " + cloneInstance.hashCode())
+    println("BEFORE CLONING (cloneInstance now is just \"None\"): cloneInstance hash: " + cloneInstance.hashCode())
 
     try {
       val cloneInstance = SingletonLazyWithOption.cloneMe
     }catch {
-      case e => println("Exception thrown during cloning (as it should be):\n" + e.getMessage)
+      case e => println("\nException thrown during cloning (as it should be):\n" + e.getMessage)
     }
 
-    println("newInstance hash: " + newInstance.hashCode())
+    println("\nnewInstance hash: " + newInstance.hashCode())
     println("AFTER CLONING: cloneInstance hash: " + cloneInstance.hashCode())
 
   }
