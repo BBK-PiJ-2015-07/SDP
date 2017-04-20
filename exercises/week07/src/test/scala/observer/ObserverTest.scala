@@ -7,11 +7,6 @@ import scala.collection.mutable.ListBuffer
   */
 class ObserverTest extends FunSuite {
 
-
-  test("SMSUsersObserver update"){}
-  test("SMSUsersObserver subscribe"){ }
-  test("SMSUsersObserver unsubscribe"){  }
-
   test("CommentaryObjectObservable setDesc"){
     val title = "Soccer Match [2014AUG24]"
     val desc = "NewDesc"
@@ -71,11 +66,5 @@ class ObserverTest extends FunSuite {
     assert(observer2.desc == newDesc4)
 
   }
-  test("CommentaryObjectObservable unSubscribeObserver"){}
-  test("CommentaryObjectObservable notifyObservers"){}
-  test("CommentaryObjectObservable subjectDetails"){}
-
-
-
 }
 
