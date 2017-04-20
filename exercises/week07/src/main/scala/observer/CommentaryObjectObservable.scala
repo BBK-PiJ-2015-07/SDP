@@ -7,11 +7,14 @@ import scala.collection.mutable.ListBuffer
   */
 class CommentaryObjectObservable (var subscribers: ListBuffer[Observer], val title: String) extends Subject with Commentary {
 
-  def this(val title: String){}
+  private var desc: String = _
 
-  var desc = null
+  def this(title: String){ this(new ListBuffer[Observer], title) }
 
-  override def setDesc(desc: String): Unit = this.desc = desc
+  override def setDesc(desc: String): Unit = {
+    this.desc = desc
+    notifyObservers()
+  }
 
   def subscribeObserver(observer: Observer) = subscribers += observer
 
@@ -21,4 +24,6 @@ class CommentaryObjectObservable (var subscribers: ListBuffer[Observer], val tit
     for (s <- subscribers) s.update(desc)
   }
   def subjectDetails: String = "CommentaryObjectObservable. subscribers: " + subscribers.toString + " title: " + title + " desc: " + desc
+
+  def getDesc = this.desc
 }

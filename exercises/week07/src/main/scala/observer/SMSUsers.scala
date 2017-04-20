@@ -1,9 +1,12 @@
 package observer
 
 class SMSUsers(s: Subject, msg: String) extends Observer {
-  def update(desc: String) = msg = desc
 
-  def subscribe() = ???
+  var desc: String = _
 
-  def unSubscribe() = ???
+  def update(desc: String) = { this.desc = desc}
+
+  def subscribe() = s.subscribeObserver(this)
+
+  def unSubscribe() = s.unSubscribeObserver(this)
 }
