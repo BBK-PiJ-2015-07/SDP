@@ -1,0 +1,10 @@
+1. Describe the Strategy Design Pattern
+A design pattern for decoupling behaviour from the class that uses that behaviour. Avoids duplicate code and superclass code breaking behaviour in subclass. Also allows multiple implementations of the behaviour in questions and for a class to change this behaviour during runtime.
+
+In the video the Strategy Pattern was implemented by creating an interface for the behaviour, multiple implementations of it and adding the interface to the superclass as a field. This forces subclasses to choose one of the behaviour options (and for it to be changed in the future).
+
+
+2.
+When is it appropriate to use the Strategy Design Pattern?
+When using a class with a behaviour from a family of behaviours (an algorithm similar to a list of algorithms). Also when the behaviour is chosen dynamically.
+

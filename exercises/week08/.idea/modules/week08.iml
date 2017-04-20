@@ -17,16 +17,21 @@
       <sourceFolder url="file://$MODULE_DIR$/../../target/scala-2.12/resource_managed/main" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../target/scala-2.12/resource_managed/test" type="java-test-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../src/main/scala/abstractfactory" />
+      <excludeFolder url="file://$MODULE_DIR$/../../src/main/scala/bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/../../src/main/scala/builder" />
+      <excludeFolder url="file://$MODULE_DIR$/../../src/main/scala/composite" />
+      <excludeFolder url="file://$MODULE_DIR$/../../src/main/scala/facadepattern" />
       <excludeFolder url="file://$MODULE_DIR$/../../target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="SBT: org.scala-lang:scala-compiler:2.12.2:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: org.scalatest:scalatest_2.12:3.0.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scalactic:scalactic_2.12:3.0.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-xml_2.12:1.0.6:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: org.scala-lang.modules:scala-parser-combinators_2.12:1.0.4:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang:scala-reflect:2.12.2:jar" level="project" />
     <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.12.2:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang:scala-reflect:2.12.2:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: org.scala-lang.modules:scala-parser-combinators_2.12:1.0.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-xml_2.12:1.0.6:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scalactic:scalactic_2.12:3.0.1:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: org.scalatest:scalatest_2.12:3.0.1:jar" level="project" />
   </component>
 </module>
