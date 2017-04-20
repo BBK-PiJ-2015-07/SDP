@@ -1,11 +1,10 @@
 package decorator
 
-class RomaTomatoes(val pizza: Pizza) extends Pizza {
-  def getDesc: String = {
-    return null
-  }
+class RomaTomatoes(val pizza: Pizza) extends PizzaDecorator (pizza) {
 
-  def getPrice: Double = {
-    return 0
-  }
+  var ownDesc: String = ", Roman Tomatoes"
+  var ownPrice: Double = 0.50
+
+  override def getDesc: String = pizza.getDesc + ownDesc
+  override def getPrice: Double = pizza.getPrice + ownPrice
 }
