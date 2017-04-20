@@ -11,7 +11,7 @@ object SingletonScript extends  App {
   //Thread.sleep(2000)
 //  println("\nSingletonScript. Creating second SingletonUser")
   //Thread.sleep(2000)
-//  val su2: SingletonUser = new SingletonUser
+  val su2: SingletonUser = new SingletonUser
   //Thread.sleep(2000)
 
 
@@ -21,6 +21,6 @@ object SingletonScript extends  App {
   //Thread.sleep(2000)
 //  println("\nSingletonScript. Running second SingletonUser")
   //Thread.sleep(2000)
-//  new Thread(su2).start()
+  new Thread(su2).start()
 
 }

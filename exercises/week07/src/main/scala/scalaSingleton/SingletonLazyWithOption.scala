@@ -1,12 +1,9 @@
 package scalaSingleton
 
-import scalaSingleton.SingletonLazyWithOption.wait
-
 /**
   * Created by apinter on 18/04/2017.
   */
 class SingletonLazyWithOption private () {}
-
 
 object SingletonLazyWithOption extends Serializable {
   private var instance : Option[SingletonLazyWithOption] = None
@@ -30,9 +27,8 @@ object SingletonLazyWithOption extends Serializable {
   //https://stackoverflow.com/questions/6004742/which-guarantees-do-scalas-singletons-have-regarding-serialization
   def readResolve: AnyRef = instance
 
-  //
-  def cloneMe = {println("in cloneMe. "); this.clone()}
-  //override def clone(): AnyRef = super.clone()
-
+  //If SingletonLazyWithOption extended a Cloneable
   override def clone(): AnyRef = throw new CloneNotSupportedException("cloning of this class is not supported by me…")
+  // cloneMe added for testing
+  def cloneMe = { this.clone()}
 }

@@ -13,7 +13,7 @@ class SingletonUser extends Runnable {
     println("SingletonUser process. SingletonLazyWithOption Instance created. ID: " + SingletonLazyWithOption.getDetails)
 
 
-    println("\n\n----------------- \nTrying to break it with clone()")
+    /*println("\n\n----------------- \nTrying to break it with clone()")
 
     var cloneInstance = None
     println("BEFORE CLONING (cloneInstance now is just \"None\"): cloneInstance hash: " + cloneInstance.hashCode())
@@ -25,7 +25,7 @@ class SingletonUser extends Runnable {
     }
 
     println("\nnewInstance hash: " + newInstance.hashCode())
-    println("AFTER CLONING: cloneInstance hash: " + cloneInstance.hashCode())
+    println("AFTER CLONING: cloneInstance hash: " + cloneInstance.hashCode())*/
 
   }
 }
