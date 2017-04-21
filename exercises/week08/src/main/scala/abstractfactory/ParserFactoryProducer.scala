@@ -1,10 +1,9 @@
 package abstractfactory
 
 object ParserFactoryProducer {
-  def getFactory(s: String) = s match {
-    case "NYCFactory" =>
+  def getFactory(s: String): AbstractParserFactory = s match {
+    case "NYCFactory" => NYCFactory()
+    case "LondonFactory" => LondonFactory()
+    case _ => throw new ClassNotFoundException("Factory not implemented")
   }
-
-  // TODO
-
 }
