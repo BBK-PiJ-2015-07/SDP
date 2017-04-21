@@ -1,0 +1,4 @@
+When is it appropriate to use the Abstract Factory Pattern?
+
+When the conceptual process of production of certain classes is the same but the implementation is different.
+AFP provides a method for grouping factories with a common theme. The concrete implementation of the classes created by the factories and their functionality are transparent to the client application which uses their generic interfaces.
