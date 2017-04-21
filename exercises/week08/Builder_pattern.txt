@@ -1,0 +1,8 @@
+"In general, the details of object construction, such as instantiating and
+initialising the components that comprise the object, are kept within the
+object, often as part of its constructor.”
+
+Comment on this statement with reference to modularity and construction bloat
+
+
+Higher degree of modularity may be achieved (and may be preferable) using the builder pattern. The main object does not have to know anything about how the component parts are created, which may involve different processes producing different representations of the object. Constructoin bloat may occur when the construction of the component parts involves comples processes. Also the changing implementations in parts or the main object may become difficult if the construction each component part is not encapsulated into a separate process.
