@@ -7,23 +7,30 @@ object TestBuilderPattern {
 
 
     director.build
-    //println(carBuilder.getCar)
-
+    println(carBuilder.getCar)
     val car1: Car = carBuilder.getCar
 
     director.build
-
     val car2: Car = carBuilder.getCar
 
-
-    println("car1 hash: " + car1.hashCode())
+    println("\ncar1 hash: " + car1.hashCode())
     println("car2 hash: " + car2.hashCode())
+    println("car1 eq car2: " + (car1 eq car2))
 
-
-    /*carBuilder = SportsCarBuilder
+    carBuilder = SportsCarBuilder
     director = CarDirector(carBuilder)
 
     director.build
-    println(carBuilder.getCar)*/
+    val car3: Car = carBuilder.getCar
+
+    println("car3 hash: " + car3.hashCode())
+    println("car3 eq car1: " + (car3 eq car1))
+
+    director.build
+    val car4 = carBuilder.getCar
+    println("car4 hash: " + car4.hashCode())
+    println("car3 eq car4: " + (car3 eq car4) + "\n")
+
+    println(carBuilder.getCar)
   }
 }
