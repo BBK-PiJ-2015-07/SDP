@@ -1,7 +1,8 @@
 package bridge
 
-object TestBridgePattern {
+object TestBridgePattern{
   def main(args: Array[String]) {
+
     val product: Product = CentralLocking("Central Locking System")
     val product2: Product = GearLocking("Gear Locking System")
     var car: Car = BigWheel(product, "BigWheel xz model")
