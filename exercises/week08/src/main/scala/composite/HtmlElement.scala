@@ -23,14 +23,15 @@ case class HtmlElement(s: String) extends HtmlTag(s) {
   override def generateHtml: Unit = println(startTag + body + endTag)
 
 
-  def canEqual(a: Any) = a.isInstanceOf[HtmlElement]
+  override def canEqual(a: Any) = a.isInstanceOf[HtmlElement]
 
-  override def equals(that: Any): Boolean =
-    that match {
-      case that: HtmlElement => (that.canEqual(this)) && (this.hashCode == that.hashCode)
+  override def equals(that: Any): Boolean = that match {
+      case that: HtmlElement => that.canEqual(this) && this.hashCode == that.hashCode
       case _ => false
     }
+
   override def hashCode: Int = {
+
     val prime = 31
     var result = 1
 

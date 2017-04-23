@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c56dda6-1bff-4074-9839-18c4d492ee1a" name="Default" comment="Week 8 - Bridge Pattern done">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/week08.iml" afterPath="$PROJECT_DIR$/.idea/modules/week08.iml" />
+    <list default="true" id="5c56dda6-1bff-4074-9839-18c4d492ee1a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/composite/HtmlElement.scala" afterPath="$PROJECT_DIR$/src/main/scala/composite/HtmlElement.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/composite/HtmlParentElement.scala" afterPath="$PROJECT_DIR$/src/main/scala/composite/HtmlParentElement.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/composite/HtmlTag.scala" afterPath="$PROJECT_DIR$/src/main/scala/composite/HtmlTag.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/composite/TestCompositePattern.scala" afterPath="$PROJECT_DIR$/src/main/scala/composite/TestCompositePattern.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -47,8 +45,8 @@
       <file leaf-file-name="HtmlParentElement.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/composite/HtmlParentElement.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="394">
+              <caret line="47" column="78" lean-forward="true" selection-start-line="47" selection-start-column="78" selection-end-line="47" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -57,8 +55,8 @@
       <file leaf-file-name="HtmlElement.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/composite/HtmlElement.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="38" column="70" lean-forward="false" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
+            <state relative-caret-position="309">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,8 +65,8 @@
       <file leaf-file-name="TestCompositePattern.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/composite/TestCompositePattern.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            <state relative-caret-position="435">
+              <caret line="73" column="26" lean-forward="false" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -910,7 +908,7 @@
       <workItem from="1492794636955" duration="195000" />
       <workItem from="1492812782655" duration="1528000" />
       <workItem from="1492865092064" duration="632000" />
-      <workItem from="1492891857367" duration="12505000" />
+      <workItem from="1492891857367" duration="14734000" />
     </task>
     <task id="LOCAL-00001" summary="Week 8 - Added exercises, setup environment">
       <created>1492703704894</created>
@@ -1017,7 +1015,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492904404010</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Week 8 - Composite Pattern. Need to fix remove">
+      <created>1492913994927</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1492913994927</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1038,7 +1043,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35388000" />
+    <option name="totallyTimeSpent" value="37617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1098,7 +1103,8 @@
     <MESSAGE value="Week 8 - Builder done - singleton objects produced" />
     <MESSAGE value="Week 8 - Facade Pattern done" />
     <MESSAGE value="Week 8 - Bridge Pattern done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week 8 - Bridge Pattern done" />
+    <MESSAGE value="Week 8 - Composite Pattern. Need to fix remove" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 8 - Composite Pattern. Need to fix remove" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1447,26 +1453,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/composite/HtmlElement.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/composite/HtmlParentElement.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="38" column="70" lean-forward="false" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
+        <state relative-caret-position="394">
+          <caret line="47" column="78" lean-forward="true" selection-start-line="47" selection-start-column="78" selection-end-line="47" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/composite/HtmlParentElement.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/composite/HtmlElement.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="309">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/composite/TestCompositePattern.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        <state relative-caret-position="435">
+          <caret line="73" column="26" lean-forward="false" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
           <folding />
         </state>
       </provider>

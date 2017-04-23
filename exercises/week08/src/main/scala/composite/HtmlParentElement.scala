@@ -22,7 +22,7 @@ case class HtmlParentElement(s: String) extends HtmlTag(s) {
 
   //override def removeChildTag(htmlTag: HtmlTag): Unit = children = children diff List(htmlTag)
 
-  override def removeChildTag(htmlTag: HtmlTag): Unit = children = children.filter(_ equals htmlTag)
+  override def removeChildTag(htmlTag: HtmlTag): Unit = children = children.filterNot(_ == htmlTag)
 
   override def getChildren: List[HtmlTag] = children
 
@@ -34,20 +34,20 @@ case class HtmlParentElement(s: String) extends HtmlTag(s) {
     println(endTag)
   }
 
-  def canEqual(a: Any) = a.isInstanceOf[HtmlParentElement]
+  override def canEqual(a: Any) = a.isInstanceOf[HtmlParentElement]
 
-  override def equals(that: Any): Boolean =
-    that match {
-      case that: HtmlParentElement => ((that.canEqual(this)) && (this.getChildren eq that.getChildren) && (this.hashCode == that.hashCode))
+  override def equals(that: Any): Boolean = that match {
+      case that: HtmlParentElement => that.canEqual(this) && (this.getChildren eq that.getChildren) && (this.hashCode == that.hashCode)
       case _ => false
     }
+
   override def hashCode: Int = {
     val prime = 31
     var result = 1
 
     result = prime * result + (if (startTag == null) 0 else startTag.hashCode)
     result = prime * result + (if (endTag == null) 0 else endTag.hashCode)
-    result = prime * result + (if (children == null) 0 else children.hashCode())
+    result = prime * result + (if (children == null) 0 else children.hashCode)
     result
   }
 
