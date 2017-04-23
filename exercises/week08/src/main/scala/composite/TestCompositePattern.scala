@@ -17,11 +17,28 @@ object TestCompositePattern extends App {
     child1.setTagBody("Testing html tag library")
     p1.addChildTag(child1)
 
+
+
     child1 = HtmlElement("<P>")
     child1.setStartTag("<P>")
     child1.setEndTag("</P>")
     child1.setTagBody("Paragraph 2")
 
+
     p1.addChildTag(child1)
     parentTag.generateHtml
+
+
+
+    println("\n\nchild1:")
+    println(child1)
+
+
+    p1.removeChildTag(child1)
+    println("\n----\nAfter removing child1\n")
+    parentTag.generateHtml
+
+
+
+
 }

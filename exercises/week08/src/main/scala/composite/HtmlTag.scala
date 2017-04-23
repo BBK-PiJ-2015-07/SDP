@@ -7,13 +7,13 @@ abstract class HtmlTag(tagName: String) {
 
   def setEndTag(tag: String)
 
-  def setTagBody(tagBody: String) = ???
+  def setTagBody(tagBody: String): Unit = throw new UnsupportedOperationException
 
-  def addChildTag(htmlTag: HtmlTag) = ???
+  def addChildTag(htmlTag: HtmlTag): Unit = throw new UnsupportedOperationException
 
-  def removeChildTag(htmlTag: HtmlTag) = ???
+  def removeChildTag(htmlTag: HtmlTag): Unit = throw new UnsupportedOperationException
 
-  def getChildren: List[HtmlTag] = ???
+  def getChildren: List[HtmlTag] = throw new UnsupportedOperationException
 
   def generateHtml
 }
