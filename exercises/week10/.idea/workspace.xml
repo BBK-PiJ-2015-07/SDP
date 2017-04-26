@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41169dcb-1084-4a0c-bfc8-9f1402b4e204" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/week10.iml" afterPath="$PROJECT_DIR$/.idea/modules/week10.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/chain/AudioFileHandler.scala" afterPath="$PROJECT_DIR$/src/main/scala/chain/AudioFileHandler.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/chain/DocFileHandler.scala" afterPath="$PROJECT_DIR$/src/main/scala/chain/DocFileHandler.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/chain/ExcelFileHandler.scala" afterPath="$PROJECT_DIR$/src/main/scala/chain/ExcelFileHandler.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/chain/ImageFileHandler.scala" afterPath="$PROJECT_DIR$/src/main/scala/chain/ImageFileHandler.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/chain/TextFileHandler.scala" afterPath="$PROJECT_DIR$/src/main/scala/chain/TextFileHandler.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/chain/VideoFileHandler.scala" afterPath="$PROJECT_DIR$/src/main/scala/chain/VideoFileHandler.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -82,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoFileHandler.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VideoFileHandler.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/chain/VideoFileHandler.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="3" column="16" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -122,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AudioFileHandler.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AudioFileHandler.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/chain/AudioFileHandler.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="85">
+              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -162,12 +156,12 @@
       <list>
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/scala/mediator/Valve.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/chain/AudioFileHandler.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/chain/DocFileHandler.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/chain/ExcelFileHandler.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/chain/ImageFileHandler.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/chain/TextFileHandler.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/chain/VideoFileHandler.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/chain/AudioFileHandler.scala" />
       </list>
     </option>
   </component>
@@ -879,7 +873,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493240939298</updated>
-      <workItem from="1493240940732" duration="5316000" />
+      <workItem from="1493240940732" duration="5536000" />
     </task>
     <task id="LOCAL-00001" summary="Week10 - re-added week10">
       <created>1493241469918</created>
@@ -888,11 +882,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493241469918</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Week10 - chain done.">
+      <created>1493246281692</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1493246281692</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5316000" />
+    <option name="totallyTimeSpent" value="5536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -938,7 +939,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Week10 - re-added week10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week10 - re-added week10" />
+    <MESSAGE value="Week10 - chain done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Week10 - chain done." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -969,14 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="49" lean-forward="false" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/chain/AudioFileHandler.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1039,8 +1033,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/chain/VideoFileHandler.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="3" column="16" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/chain/AudioFileHandler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
           <folding />
         </state>
       </provider>
