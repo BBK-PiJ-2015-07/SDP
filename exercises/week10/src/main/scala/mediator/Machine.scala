@@ -2,9 +2,16 @@ package mediator
 
 class Machine extends Colleague {
 
-  override def setMediator(mediator: MachineMediator): Unit = ???
+  private var mediator: MachineMediator = _
+  override def setMediator(mediator: MachineMediator): Unit = this.mediator = mediator
 
-  def start(): Unit = ???
+  def start(): Unit = {
+    println("Machine start...")
+    mediator.open()
+  }
 
-  def wash(): Unit = ???
+  def wash(): Unit = {
+    println("Machine wash...")
+    //mediator.wash()
+  }
 }

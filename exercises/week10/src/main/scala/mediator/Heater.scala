@@ -7,7 +7,7 @@ class Heater extends Colleague {
 
   def on(temp: Int): Unit = {
     println("Heater is on...")
-    mediator.on()
+    mediator.checkTemperature(temp)
   }
 
   def off(): Unit = {
