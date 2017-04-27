@@ -11,7 +11,7 @@ object TestInterpreterPattern extends App {
         val rightExpression: Expression = stack.pop()
         val leftExpression: Expression = stack.pop()
         val operator: Expression =
-          ExpressionUtils.getOperator(s, leftExpression, rightExpression)
+          ExpressionUtils.getOperation(s, leftExpression, rightExpression)
         stack.push(new Number(operator.interpret()))
       } else {
         stack.push(new Number(java.lang.Integer.parseInt(s)))
