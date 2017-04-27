@@ -19,7 +19,6 @@
       <excludeFolder url="file://$MODULE_DIR$/../../src/main/java" />
       <excludeFolder url="file://$MODULE_DIR$/../../src/main/resources" />
       <excludeFolder url="file://$MODULE_DIR$/../../src/main/scala-2.12" />
-      <excludeFolder url="file://$MODULE_DIR$/../../src/main/scala/command" />
       <excludeFolder url="file://$MODULE_DIR$/../../src/main/scala/interpreter" />
       <excludeFolder url="file://$MODULE_DIR$/../../src/main/scala/iterator" />
       <excludeFolder url="file://$MODULE_DIR$/../../src/main/scala/mediator" />
