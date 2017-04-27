@@ -17,5 +17,11 @@ object AccessControlProvider {
 
   map.put("VP", new AccessControl("VP", "MODIFY REPORTS"))
 
-  def getAccessControlObject(controlLevel: String): AccessControl = map getOrElse (controlLevel, None) clone()
+  def getAccessControlObject(controlLevel: String): AccessControl = {
+    val ac = map get controlLevel
+    ac match{
+      case Some(ac) => ac.clone
+      case None => new AccessControl("DEFAULT", "NO ACCESS")
+    }
+  }
 }
