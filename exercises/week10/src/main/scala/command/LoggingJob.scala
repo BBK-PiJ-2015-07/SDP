@@ -7,6 +7,6 @@ class LoggingJob extends Job {
 
   override def run(): Unit = logging match {
     case Some(logging) => logging.log()
-    case _ => println("No Logging set in LoggingJob."); throw new RuntimeException("No Logging set in LoggingJob.")
+    case None => println("No Logging set in LoggingJob."); throw new RuntimeException("No Logging set in LoggingJob.")
   }
 }

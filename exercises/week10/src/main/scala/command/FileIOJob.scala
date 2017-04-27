@@ -8,6 +8,6 @@ class FileIOJob extends Job {
 
   override def run(): Unit = fileIO match {
     case Some(fileIO) => fileIO.execute()
-    case _ => println("No FileIO instance set in FileIOJob"); throw new RuntimeException("No FileIO instance set in FileIOJob.")
+    case None => println("No FileIO instance set in FileIOJob"); throw new RuntimeException("No FileIO instance set in FileIOJob.")
   }
 }

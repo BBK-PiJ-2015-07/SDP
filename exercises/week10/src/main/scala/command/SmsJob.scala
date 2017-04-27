@@ -7,6 +7,6 @@ class SmsJob extends Job {
 
   override def run(): Unit = sms match {
     case Some(sms) => sms.sendSms()
-    case _ => println("No Sms instance set in SmsJob"); throw new RuntimeException("No Sms instance set in SmsJob.")
+    case None => println("No Sms instance set in SmsJob"); throw new RuntimeException("No Sms instance set in SmsJob.")
   }
 }
