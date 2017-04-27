@@ -15,8 +15,11 @@ object TestIteratorPattern extends App {
     println("Apply removing while iterating...")
     iterator = new ShapeIterator(storage.shapes)
 
+    println("iterator before remove: " + iterator)
     while (iterator.hasNext) {
       println(iterator.next())
       iterator.remove()
     }
+
+    println("iterator after remove: " + iterator)
 }

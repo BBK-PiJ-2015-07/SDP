@@ -1,13 +1,12 @@
 package iterator
 
-//import java.util.Iterator
-
 class ShapeIterator(private var shapes: Array[Shape]) extends Iterator[Shape] {
 
-  val it = Iterator(shapes)
-  override def hasNext(): Boolean = ???
+  var iterator: Iterator[Shape] = shapes.iterator
 
-  override def next(): Shape = ???
+  override def hasNext: Boolean = iterator.hasNext
 
-  override def remove(): Unit = ???
+  override def next: Shape = iterator.next
+
+  def remove(): Unit = iterator.drop(0)
 }
