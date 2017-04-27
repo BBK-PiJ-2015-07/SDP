@@ -2,9 +2,16 @@ package mediator
 
 class Heater extends Colleague {
 
-  override def setMediator(mediator: MachineMediator): Unit = ???
+  private var mediator: MachineMediator = _
+  override def setMediator(mediator: MachineMediator): Unit = this.mediator  = mediator
 
-  def on(temp: Int): Unit = ???
+  def on(temp: Int): Unit = {
+    println("Heater is on...")
+    mediator.on()
+  }
 
-  def off(): Unit = ???
+  def off(): Unit = {
+    println("Heater is off...")
+    mediator.off()
+  }
 }
