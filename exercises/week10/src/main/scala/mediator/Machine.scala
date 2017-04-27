@@ -6,12 +6,12 @@ class Machine extends Colleague {
   override def setMediator(mediator: MachineMediator): Unit = this.mediator = mediator
 
   def start(): Unit = {
-    println("Machine start...")
+    //println("Machine start...")
     mediator.open()
   }
 
   def wash(): Unit = {
-    println("Machine wash...")
+    //println("Machine wash...")
     //mediator.wash()
   }
 }

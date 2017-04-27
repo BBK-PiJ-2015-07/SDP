@@ -1,8 +1,11 @@
 package mediator
 
-import org.scalatest.Fact.Binary_&
+//import org.scalatest.Fact.Binary_&
 
 class Sensor {
 
-  def checkTemperature(temp: Int): Boolean = ???
+  def checkTemperature(temp: Int): Boolean = {
+    println("Temperature reached " + temp + "C.")
+    true
+  }
 }

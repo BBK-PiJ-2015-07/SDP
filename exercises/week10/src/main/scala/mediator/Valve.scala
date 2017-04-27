@@ -6,8 +6,8 @@ class Valve extends Colleague {
   override def setMediator(mediator: MachineMediator): Unit = this.mediator = mediator
 
   def open(): Unit = {
-    println("Valve is opened...")
-    mediator.
+    println("Valve is opened...\nFilling water...")
+    mediator.closed()
   }
 
   def closed(): Unit = {
