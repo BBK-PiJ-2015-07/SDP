@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41169dcb-1084-4a0c-bfc8-9f1402b4e204" name="Default" comment="">
+    <list default="true" id="41169dcb-1084-4a0c-bfc8-9f1402b4e204" name="Default" comment="Week10 - prototype pattern done.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/prototype/AccessControl.scala" afterPath="$PROJECT_DIR$/src/main/scala/prototype/AccessControl.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/prototype/AccessControlProvider.scala" afterPath="$PROJECT_DIR$/src/main/scala/prototype/AccessControlProvider.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/prototype/Prototype.scala" afterPath="$PROJECT_DIR$/src/main/scala/prototype/Prototype.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/prototype/User.scala" afterPath="$PROJECT_DIR$/src/main/scala/prototype/User.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -68,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Prototype.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Prototype.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/prototype/Prototype.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="76" lean-forward="false" selection-start-line="3" selection-start-column="76" selection-end-line="3" selection-end-column="76" />
+            <state relative-caret-position="68">
+              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -88,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/prototype/User.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -178,11 +176,11 @@
         <option value="$PROJECT_DIR$/src/main/scala/interpreter/ExpressionUtils.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/interpreter/Sub.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/interpreter/Div.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/prototype/User.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/prototype/TestPrototypePattern.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/prototype/AccessControlProvider.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/prototype/Prototype.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/prototype/AccessControl.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/prototype/User.scala" />
       </list>
     </option>
   </component>
@@ -945,7 +943,7 @@
       <updated>1493240939298</updated>
       <workItem from="1493240940732" duration="8954000" />
       <workItem from="1493283762298" duration="614000" />
-      <workItem from="1493289524645" duration="9650000" />
+      <workItem from="1493289524645" duration="9838000" />
     </task>
     <task id="LOCAL-00001" summary="Week10 - re-added week10">
       <created>1493241469918</created>
@@ -1010,11 +1008,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493307151354</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Week10 - prototype pattern done.">
+      <created>1493308622772</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1493308622772</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19218000" />
+    <option name="totallyTimeSpent" value="19406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="118" y="113" width="1578" height="863" extended-state="0" />
@@ -1068,7 +1073,8 @@
     <MESSAGE value="Week10 - interpreter pattern done. To check." />
     <MESSAGE value="Week10 - prototype pattern. done toString override for User class" />
     <MESSAGE value="Week10 - prototype pattern. clone() to fix..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Week10 - prototype pattern. clone() to fix..." />
+    <MESSAGE value="Week10 - prototype pattern done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Week10 - prototype pattern done." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1454,22 +1460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/prototype/AccessControlProvider.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="23" column="60" lean-forward="false" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/prototype/Prototype.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="76" lean-forward="false" selection-start-line="3" selection-start-column="76" selection-end-line="3" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/prototype/TestPrototypePattern.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1480,8 +1470,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/prototype/User.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/prototype/AccessControlProvider.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="23" column="60" lean-forward="false" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/prototype/Prototype.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
           <folding />
         </state>
       </provider>
