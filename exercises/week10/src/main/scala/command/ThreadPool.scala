@@ -43,6 +43,7 @@ class ThreadPool(n: Int) {
       while (!shutdown) 
       try {
         val r: Job = jobQueue.take()
+
         r.run
       } catch {
         case e: InterruptedException => {}
