@@ -1,8 +1,10 @@
 package prototype
 
+import scala.collection.mutable.Map
+
 object AccessControlProvider {
 
-  private var map = new Map()
+  private var map = Map[String, AccessControl]()
 
   println("Fetching data from external resources and creating access control objects...")
 
@@ -15,6 +17,5 @@ object AccessControlProvider {
 
   map.put("VP", new AccessControl("VP", "MODIFY REPORTS"))
 
-  def getAccessControlObject(controlLevel: String): AccessControl = ???
-
+  def getAccessControlObject(controlLevel: String): AccessControl = map getOrElse (controlLevel, None) clone()
 }
