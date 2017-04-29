@@ -1,20 +1,57 @@
 package visitor
 
 case class HtmlParentElement(var tagName: String) extends HtmlTag {
+
   var startTag: String = ""
   var endTag: String = ""
+  var children: List[HtmlTag] = List[HtmlTag]()
 
-  private var childrenTag = ???
+  override def getTagName(): String = tagName
 
-  override def addChildTag(htmlTag: HtmlTag): Unit = ???
-  override def removeChildTag(htmlTag: HtmlTag): Unit = ???
-  override def getChildren() = childrenTag
-  override def generateHtml(): Unit = ???
-  override def accept(visitor: Visitor): Unit = ???
+  override def getStartTag(): String = startTag
 
-  def getEndTag(): String = ???
-  def getStartTag(): String = ???
-  def getTagName(): String = ???
-  def setEndTag(tag: String): Unit = ???
-  def setStartTag(tag: String): Unit = ???
+  override def getEndTag(): String = endTag
+
+  override def setStartTag(tag: String): Unit = startTag = tag
+
+  override def setEndTag(tag: String): Unit = endTag = tag
+
+  override def addChildTag(htmlTag: HtmlTag): Unit = children = children :+ htmlTag
+
+  //override def removeChildTag(htmlTag: HtmlTag): Unit = children = children diff List(htmlTag)
+
+  override def removeChildTag(htmlTag: HtmlTag): Unit = children = children.filterNot(_ == htmlTag)
+
+  override def getChildren: List[HtmlTag] = children
+
+  override def toString(): String = {
+    "start: " + getStartTag + " - end: " + getEndTag + " - children: " + children
+  }
+
+  override def accept(visitor: Visitor): Unit = visitor.visit(this)
+
+  override def generateHtml: Unit = {
+    println(startTag)
+    for (c <- children) {
+      c.generateHtml
+    }
+    println(endTag)
+  }
+
+  override def canEqual(a: Any) = a.isInstanceOf[HtmlParentElement]
+
+  override def equals(that: Any): Boolean = that match {
+    case that: HtmlParentElement => that.canEqual(this) && (this.getChildren eq that.getChildren) && (this.hashCode == that.hashCode)
+    case _ => false
+  }
+
+  override def hashCode: Int = {
+    val prime = 31
+    var result = 1
+
+    result = prime * result + (if (startTag == null) 0 else startTag.hashCode)
+    result = prime * result + (if (endTag == null) 0 else endTag.hashCode)
+    result = prime * result + (if (children == null) 0 else children.hashCode)
+    result
+  }
 }
