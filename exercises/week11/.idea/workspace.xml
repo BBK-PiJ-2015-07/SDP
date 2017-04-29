@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acad8eb4-57c8-481a-9218-9828abdd0786" name="Default" comment="Week11 - memento pattern done">
+    <list default="true" id="acad8eb4-57c8-481a-9218-9828abdd0786" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_modules_scala_parser_combinators_2_12_1_0_4_jar.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_modules_scala_xml_2_12_1_0_6_jar.xml" />
@@ -19,8 +19,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/proxy/remoteproxy/ReportGeneratorClient.scala" afterPath="$PROJECT_DIR$/src/main/scala/proxy/remoteproxy/ReportGeneratorClient.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/proxy/remoteproxy/ReportGeneratorImpl.scala" afterPath="$PROJECT_DIR$/src/main/scala/proxy/remoteproxy/ReportGeneratorImpl.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1017,7 +1015,7 @@
       <option name="presentableId" value="Default" />
       <updated>1493337694831</updated>
       <workItem from="1493337696250" duration="1006000" />
-      <workItem from="1493459011516" duration="1271000" />
+      <workItem from="1493459011516" duration="1291000" />
     </task>
     <task id="LOCAL-00001" summary="Week11 - added exercises">
       <created>1493338106786</created>
@@ -1040,11 +1038,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493460747492</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Week11 - remote proxy. to fix.">
+      <created>1493460945992</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1493460945992</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2277000" />
+    <option name="totallyTimeSpent" value="2297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1092,7 +1097,8 @@
     <MESSAGE value="Week11 - added exercises" />
     <MESSAGE value="Week11 - flyweight pattern done" />
     <MESSAGE value="Week11 - memento pattern done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week11 - memento pattern done" />
+    <MESSAGE value="Week11 - remote proxy. to fix." />
+    <option name="LAST_COMMIT_MESSAGE" value="Week11 - remote proxy. to fix." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
