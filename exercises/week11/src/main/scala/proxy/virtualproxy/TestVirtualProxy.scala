@@ -13,4 +13,11 @@ object TestVirtualProxy extends App {
   for (emp <- empList) {
     println(emp)
   }
+
+  println("Requesting for contact list again")
+  var contactList2 = company.contactList
+  val empList2 = contactList2.employeeList
+  for (emp <- empList2) {
+    println(emp)
+  }
 }
