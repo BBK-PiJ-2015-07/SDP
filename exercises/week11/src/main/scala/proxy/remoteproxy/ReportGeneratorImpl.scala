@@ -30,5 +30,4 @@ case class ReportGeneratorImpl protected ()
     sb.append("\\n ***************************************************************")
     sb.toString()
   }
-
 }

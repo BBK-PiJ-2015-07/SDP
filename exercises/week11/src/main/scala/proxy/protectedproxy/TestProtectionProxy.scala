@@ -5,6 +5,7 @@ object TestProtectionProxy extends App {
   var reportGenerator: ReportGeneratorProxy =
     new ReportGeneratorProtectionProxy(owner)
   owner.setReportGenerator(reportGenerator)
+
   val employee: Employee = new Employee()
   reportGenerator = new ReportGeneratorProtectionProxy(employee)
   employee.setReportGenerator(reportGenerator)
