@@ -19,7 +19,7 @@ project/plugins/project/
 .worksheet
 
 #idea
-.idea/*
+.idea
 out/
 
 
